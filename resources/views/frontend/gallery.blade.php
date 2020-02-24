@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>GC</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Rajdhani&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-	integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
-	<link href="css/hover.css" type="text/css" rel="stylesheet"/>
-	<link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GC</title>
+    <link rel="stylesheet" href="{{asset('https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css')}}" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="{{asset('css/font-awesome.min.css')}}" rel="stylesheet" type="text/css"/>
+    <link href="{{asset('https://fonts.googleapis.com/css?family=Open+Sans|Rajdhani&display=swap')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('https://pro.fontawesome.com/releases/v5.10.0/css/all.css')}}"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{asset('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css')}}">
+    <link href="{{asset('css/hover.css')}}" type="text/css" rel="stylesheet"/>
+    <link href="{{asset('css/style.css')}}" rel="stylesheet" type="text/css"/>
 </head>
 <body>
   <section class="top_head">
@@ -42,43 +42,43 @@
            </div><!-- row -->
     </div><!-- container -->
   </section><!-- top_head -->
-<div class="top_navigation top_navigation2 nav_no_pos">
-  <div class="container">
-   <nav class="navbar navbar-expand-lg navbar-light">
-     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-       <span class="navbar-toggler-icon"></span>
-     </button>
-     <div class="collapse navbar-collapse" id="navbarNav">
-       <ul class="navbar-nav navbar-nav2">
-        <li class="nav-item active">
-         <a class="nav-link" href="{{route('index')}}">HOME<span class="sr-only">(current)</span></a>
-       </li>
-       <li class="nav-item">
-         <a class="nav-link hvr-underline-from-center" href="#">PRODUCTS</a>
-       </li>
-       <li class="nav-item">
-         <a class="nav-link hvr-underline-from-center" href="#">GALLERY</a>
-       </li>
-       <li class="nav-item">
-         <a class="nav-link hvr-underline-from-center" href="#">ABOUT US</a>
-       </li>
-       <li class="nav-item">
-         <a class="nav-link hvr-underline-from-center" href="#">BLOG</a>
-       </li>
-       <li class="nav-item">
-         <a class="nav-link hvr-underline-from-center" href="#">CONTACT</a>
-       </li>
+  <div class="top_navigation top_navigation2 nav_no_pos">
+      <div class="container">
+          <nav class="navbar navbar-expand-lg navbar-light">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav navbar-nav2">
+                      <li class="nav-item active">
+                          <a class="nav-link" href="{{route('index')}}">HOME<span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link hvr-underline-from-center" href="{{route('products.index')}}">PRODUCTS</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link hvr-underline-from-center" href="{{route('galleries.index')}}">GALLERY</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link hvr-underline-from-center" href="{{route('abouts.index')}}">ABOUT US</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link hvr-underline-from-center" href="{{route('blogs.index')}}">BLOG</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link hvr-underline-from-center" href="{{route('contacts.index')}}">CONTACT</a>
+                      </li>
 
-     </ul>
-   </div>
-   <div class="login_top">
-     <a href="#" class="btn_default">Login/Register</a>
-   </div><!-- login_top -->
- </nav>
-</div><!-- container -->
-</div><!-- top_navigation -->
+                  </ul>
+              </div>
+              <div class="login_top">
+                  <a href="#" class="btn_default">Login/Register</a>
+              </div><!-- login_top -->
+          </nav>
+      </div><!-- container -->
+  </div>
 
-<section class="inner_slider_banner">
+  <section class="inner_slider_banner">
 	<div class="inner_slider_banner_overlay">
 
       </div><!-- inner_slider_banner_overlay -->
@@ -103,62 +103,16 @@
 <div class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="photo" role="tabpanel" aria-labelledby="photo-tab">
   	<div class="row">
+        @foreach($gallery as $gallery)
   		<div class="col-md-3 no-pad">
 						<div class="gallery_grid_more padding_right02p">
-							<img src="images/s425361601631838882_p2359_i1_w2560.jpeg" width="200" height="200">
+							<img src="{{asset(''.$gallery->image)}}" width="200" height="200">
 							<div class="gallery_overlay">
-								<a href="#"><i class="fas fa-arrow-right"></i></a>
+								<a href="{{asset(''.$gallery->image)}}"><i class="fas fa-arrow-right"></i></a>
 							</div><!-- gallery_overlay -->
 						</div><!-- gallery_grid_more -->
-						<div class="gallery_grid_more padding_top1p padding_right02p">
-							<img src="images/2314BF22-22CA-4DD7-AFF7-A49B0194B61B.jpeg.ca0f10f248c17102dfbf5414afec07d9.jpeg" width="200" height="200">
-							<div class="gallery_overlay">
-								<a href="#"><i class="fas fa-arrow-right"></i></a>
-							</div><!-- gallery_overlay -->
-						</div><!-- gallery_grid_more -->
-					</div>
-					<div class="col-md-3 no-pad">
-						<div class="gallery_grid_more padding_right02p">
-							<img src="images/s425361601631838882_p2359_i1_w2560.jpeg" width="200" height="200">
-							<div class="gallery_overlay">
-								<a href="#"><i class="fas fa-arrow-right"></i></a>
-							</div><!-- gallery_overlay -->
-						</div><!-- gallery_grid_more -->
-						<div class="gallery_grid_more padding_top1p padding_right02p">
-							<img src="images/2314BF22-22CA-4DD7-AFF7-A49B0194B61B.jpeg.ca0f10f248c17102dfbf5414afec07d9.jpeg" width="200" height="200">
-							<div class="gallery_overlay">
-								<a href="#"><i class="fas fa-arrow-right"></i></a>
-							</div><!-- gallery_overlay -->
-						</div><!-- gallery_grid_more -->
-					</div>
-					<div class="col-md-3 no-pad">
-						<div class="gallery_grid_more padding_right02p">
-							<img src="images/s425361601631838882_p2359_i1_w2560.jpeg" width="200" height="200">
-							<div class="gallery_overlay">
-								<a href="#"><i class="fas fa-arrow-right"></i></a>
-							</div><!-- gallery_overlay -->
-						</div><!-- gallery_grid_more -->
-						<div class="gallery_grid_more padding_top1p padding_right02p">
-							<img src="images/2314BF22-22CA-4DD7-AFF7-A49B0194B61B.jpeg.ca0f10f248c17102dfbf5414afec07d9.jpeg" width="200" height="200">
-							<div class="gallery_overlay">
-								<a href="#"><i class="fas fa-arrow-right"></i></a>
-							</div><!-- gallery_overlay -->
-						</div><!-- gallery_grid_more -->
-					</div>
-					<div class="col-md-3 no-pad">
-						<div class="gallery_grid_more padding_right02p">
-							<img src="images/s425361601631838882_p2359_i1_w2560.jpeg" width="200" height="200">
-							<div class="gallery_overlay">
-								<a href="#"><i class="fas fa-arrow-right"></i></a>
-							</div><!-- gallery_overlay -->
-						</div><!-- gallery_grid_more -->
-						<div class="gallery_grid_more padding_top1p padding_right02p">
-							<img src="images/2314BF22-22CA-4DD7-AFF7-A49B0194B61B.jpeg.ca0f10f248c17102dfbf5414afec07d9.jpeg" width="200" height="200">
-							<div class="gallery_overlay">
-								<a href="#"><i class="fas fa-arrow-right"></i></a>
-							</div><!-- gallery_overlay -->
-						</div><!-- gallery_grid_more -->
-					</div>
+        </div>
+                @endforeach
   	</div><!-- row -->
   	<div class="pagination">
   		<nav aria-label="Page navigation example">
@@ -317,13 +271,13 @@
                         <div class="footer-title">
                           <h4 class="title">USEFUL LINKS</h4>
                         </div>
-                        <ul class="link">
-                          <li><a href="#">Home</a></li>
-                          <li><a href="#">About</a></li>
-                          <li><a href="#">Products</a></li>
-                          <li><a href="#">Blogs</a></li>
-                          <li><a href="#">Gallery</a></li>
-                        </ul>
+                          <ul class="link">
+                              <li><a href="{{route('index')}}">Home</a></li>
+                              <li><a href="{{route('abouts.index')}}">About</a></li>
+                              <li><a href="{{route('products.index')}}">Products</a></li>
+                              <li><a href="{{route('blogs.index')}}">Blogs</a></li>
+                              <li><a href="{{route('galleries.index')}}">Gallery</a></li>
+                          </ul>
                       </div> <!-- footer wrapper -->
 
                     </div> <!-- footer link -->
@@ -386,7 +340,7 @@
 	</div><!-- container -->
 </section>
 
-  
+
 
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

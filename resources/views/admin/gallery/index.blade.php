@@ -291,10 +291,11 @@
 
                         <td ><img src="{{asset(''.$gallery->image)}}" height="100px" width="100px"></td>
                         <td>
-                            @if(isset($gallery->category))
+                        {!! $gallery->category_id !!}
+                           {{-- @if(isset($gallery->category))
                                 {{$gallery->category->title}}
-                                {{--                            {{dd($damage->gallery->name)}}--}}
-                            @endif
+                                --}}{{--                            {{dd($damage->gallery->name)}}--}}{{--
+                            @endif--}}
                         </td>
                         {{--                        <td >{{$blog->author}} </td>--}}
                         {{--                        <td >{!! $blog->category !!} </td>--}}

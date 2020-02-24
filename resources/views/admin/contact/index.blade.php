@@ -19,7 +19,7 @@
     <div class="content-body content-body-calendar" style="margin-top: -50px;">
         <div class="d-md-flex justify-content-between">
             <h4 class="content-title mg-t-10">Welcome to contact</h4>
-            <a href="{{route('contact.create')}}" class="btn btn-sm btn-primary"> Add new Contact</a>
+{{--            <a href="{{route('contact.create')}}" class="btn btn-sm btn-primary"> Add new Contact</a>--}}
             {{--            <button type="button" class="btn btn-sm btn-primary">Add  New Customer</button>--}}
         </div>
         <div class="component-section">
@@ -31,6 +31,7 @@
                     <th>Name</th>
                     <th>Email</th>
                     <th>Subject</th>
+                    <th>Mobile No</th>
                     <th>Message</th>
                     <th class="text-center">Action</th>
                 </tr>
@@ -43,6 +44,7 @@
                         <td>{!! $contact->name !!}</td>
                         <td >{{$contact->email}}  </td>
                         <td >{{$contact->subject}}</td>
+                        <td >{{$contact->mobile}}</td>
                         <td>{{$contact->message}}</td>
 
                         <td class="d-md-flex">

@@ -40,7 +40,7 @@ class CategoryController extends Controller
     {
         $this->validate($request,[
             'title'=>'required',
-            'image'=>'required',
+//            'image'=>'required',
 
         ]);
 
@@ -48,17 +48,17 @@ class CategoryController extends Controller
         $category = new Category() ;
 
         $category->title=$request->get('title');
-        if($request->hasFile('image')){
-            $image=$request->file('image');
-            $image_new_name=time().$image->getClientOriginalName();
-            $destination='uploads/topwide';
-            $image->move($destination,$image_new_name);
-            $category->image = '/uploads/topwide/'.$image_new_name;
-//
-        }
+//        if($request->hasFile('image')){
+//            $image=$request->file('image');
+//            $image_new_name=time().$image->getClientOriginalName();
+//            $destination='uploads/topwide';
+//            $image->move($destination,$image_new_name);
+//            $category->image = '/uploads/topwide/'.$image_new_name;
+////
+//        }
 
         $category->save();
-        return back()->with('success','Data has been added successfully'); 
+        return back()->with('success','Data has been added successfully');
     }
 
     /**
@@ -95,7 +95,7 @@ class CategoryController extends Controller
     {
         $this->validate($request,[
             'title'=>'required',
-            'image'=>'required',
+//            'image'=>'required',
 
         ]);
 
@@ -104,18 +104,18 @@ class CategoryController extends Controller
         if ($id)
         {
             $category->title=$request->get('title');
-            if($request->hasFile('image')){
-                $image=$request->file('image');
-                $image_new_name=time().$image->getClientOriginalName();
-                $destination='uploads/topwide';
-                $image->move($destination,$image_new_name);
-                $category->image = '/uploads/topwide/'.$image_new_name;
-            }
+//            if($request->hasFile('image')){
+//                $image=$request->file('image');
+//                $image_new_name=time().$image->getClientOriginalName();
+//                $destination='uploads/topwide';
+//                $image->move($destination,$image_new_name);
+//                $category->image = '/uploads/topwide/'.$image_new_name;
+//            }
         }
 
 
         $category->save();
-        return back()->with('success','Data has been added successfully'); 
+        return back()->with('success','Data has been added successfully');
     }
 
     /**
@@ -128,7 +128,7 @@ class CategoryController extends Controller
     {
         $category = Category::find($id);
         $category->delete();
-        return back()->with('success','Data has been deleted successfully'); 
+        return back()->with('success','Data has been deleted successfully');
         // return '#about'.$id;
     }
 }

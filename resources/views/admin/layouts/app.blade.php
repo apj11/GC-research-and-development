@@ -33,7 +33,7 @@
 @include('admin.partials.header')
 <!-- <div class="row"> -->
 
-{{--    @include('flash-message')--}}
+@include('flash-message')
 @yield('content')
 <!-- </div> -->
 

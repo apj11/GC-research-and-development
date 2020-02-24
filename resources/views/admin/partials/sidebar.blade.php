@@ -1,8 +1,8 @@
 <div class="sidebar">
     <div class="sidebar-header">
         <div>
-            <a href="{{route('home')}}" class="sidebar-logo"><span>GD</span></a>
-            <small class="sidebar-logo-headline">welcome!!!</small>
+            <a href="{{route('home')}}" class="sidebar-logo"><span>GC Research and Development</span></a>
+{{--            <small class="sidebar-logo-headline">welcome!!!</small>--}}
         </div>
     </div><!-- sidebar-header -->
     <div id="dpSidebarBody" class="sidebar-body">
@@ -18,14 +18,24 @@
                     <a href="{{route('about.index')}}" class="nav-sub-link">All About</a>
                 </nav>
             </li>
+
             <li class="nav-item">
                 <a href="" class="nav-link with-sub"><i data-feather="lock"></i>Contact List</a>
                 <nav class="nav nav-sub">
-                    <a href="{{route('contact.create')}}" class="nav-sub-link">New Contact</a>
+{{--                    <a href="{{route('contact.create')}}" class="nav-sub-link">New Contact</a>--}}
                     <a href="{{route('contact.index')}}" class="nav-sub-link">All Contact list</a>
 {{--                    <a href="#" class="nav-sub-link">Purchase Return</a>--}}
                 </nav>
             </li>
+
+            <li class="nav-item">
+                <a href="" class="nav-link with-sub"><i data-feather="layout"></i>Award</a>
+                <nav class="nav nav-sub">
+                    <a href="{{route('award.create')}}" class="nav-sub-link">New Award</a>
+                    <a href="{{route('award.index')}}" class="nav-sub-link">All Award</a>
+                </nav>
+            </li>
+
             <li class="nav-item">
                 <a href="" class="nav-link with-sub"><i data-feather="user"></i> Gallery Category</a>
                 <nav class="nav nav-sub">

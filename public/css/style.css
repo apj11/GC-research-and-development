@@ -135,6 +135,13 @@ p {
 .mg-t-3p{
 	margin-top: 3%;
 }
+.mg-t-4p{
+	margin-top: 4%;
+}
+.mg-b-4p{
+	margin-bottom: 4%;
+}
+
 
 
 
@@ -361,7 +368,7 @@ background: white;
 
 	.services .service_blk i{
 		font-size: 120px;
-	}
+	} 
 	.service_blk{
 		background-color: white;
 		padding-top: 20%;
@@ -1126,7 +1133,7 @@ color: white;
 	/*......................gallery page......................*/
 
 	.inner_slider_banner {
-		background-image:
+		background-image: 
 	}
 
 	.gallery_tab{
@@ -1203,14 +1210,14 @@ color: white;
     font-weight: bold;
     font-size: 14px;
     transition: 1s all;
-    text-align: center;
+    text-align: center;	
 }
 
 .inner_contact_btn a:hover{
 	background-color: black;
 	color: white;
 	transition: 1s all;
-}
+}	
 .inner_slider_banner{
 	      background-image: url(../images/restaurant.png);
     background-repeat: no-repeat;
@@ -1297,7 +1304,7 @@ color: white;
 		    font-size: 1rem;
 		    color: #9b9b9b;
 
-	}
+	}  
 	.card-body .btn{
 		       color: #212529;
     font-weight: bold;
@@ -1318,6 +1325,9 @@ color: white;
 	.blog_detail_division{
 		padding-top: 5%;
 		padding-bottom: 5%;
+	}
+	.card-body_detail{
+		padding-left: 0;
 	}
 	.card-body_detail span{
 	  color: #9b9b9b;
@@ -1361,7 +1371,7 @@ color: white;
 		}
 			.inner_news_head h3{
 				font-size: 20px;
-    font-weight: 600;
+    font-weight: 600;	
     margin-bottom: 0;
 			}
 			.inner_news_head{
@@ -1426,3 +1436,338 @@ color: white;
  		color: black;
  		    transition: 1s all;
  	}
+
+
+ 	/*.................about us.............*/
+ 	.about_section{
+ 		padding-top: 4%;
+ 	}
+ 	.about_section .nav-tabs{	
+ 		display: inherit;
+ 	}
+ 	.about_section .nav-tabs i{
+ 		color: #495057;
+    font-size: 12px;
+    border: 1px solid;
+    width: 20px;
+    height: 20px;
+    border-radius: 13px;
+    text-align: center;
+    line-height: 18px;
+    float: right;
+            margin-top: 2%;
+ 	}
+ 	.about_section .nav-tabs .active{
+ 		color: black;
+ 		border: 1px solid;
+ 	}
+ 	.about_section .nav-tabs a{
+ 			    font-family: 'Rajdhani', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: grey;
+    border: 1px solid;
+    border-radius: 0;
+ 	}
+ 	.about_section .nav-tabs .active i{
+ 			color: black;
+ 			
+ 	}
+ 	.about_section .nav-tabs .nav-item{
+ 		margin-left: 0;
+ 	}
+ 	.about_section .nav-tabs a:last-child{
+ 		margin-top: 6%;
+ 	}
+ 	.about_section .point_line{
+ 		display: flex;
+    margin-top: 4%;
+ 	}
+ 	.about_section .point_lead{
+ 		display: contents;
+ 	}
+ 	.about_section .point_lead i{
+ 		    line-height: 24px;
+ 		    margin-bottom: 0;
+ 	}
+ 	.about_overview h3{
+ 		position: relative;
+ 		display: inline-block;
+ 		margin-bottom: 6%;
+ 	}
+
+ 	.about_overview h3:after{
+ 		position: absolute;
+ 		content: "";
+ 		width: 100%;
+ 		height: 3px;
+ 		background-color:#137bc0;
+ 		left: 0;
+ 		bottom: -10%;
+ 	}
+ 	.overview_content_blk{
+ 		    display: flex;
+    border: 1px solid #9b9b9b;
+               padding: 30px 40px;
+ 	}
+  
+ 	.overview_image img{
+ 		  height: 40px;
+    width: 40px;
+ 	}
+ 	.overview_lead{
+ 		padding-left: 6%;
+ 	}
+ 	.overview_lead h4{
+ 		    font-weight: bold;
+    font-size: 18px;
+ 	}
+ 	.overview_lead p{
+ 		    font-size: 12px;
+    color: #9b9b9b;
+        height: 36px;
+        overflow: hidden;
+ 	}
+ 	.overview_lead a{
+ 	float: right;
+    background: #212529;
+    color: white;
+    padding: 1px 30px;
+    margin-top: 5%;
+ 	}
+ 	.mission_content h4{
+ 		font-weight: bold;
+    font-size: 14px;
+        margin-bottom: 5%;
+ 	}
+
+.mission_lead p{
+	font-size: 12px;
+    color: #9b9b9b;
+        width: 70%;
+        font-weight: bold;
+}
+.mission_img img{
+	    width: 100%;
+    height: 150px;
+}
+.mission_content hr{
+		    margin: 5% 0%;
+}
+.mission_lead2 p{
+	float: right;
+
+}
+.mission_content .card-title{
+	margin-top: 6%;
+}
+.mission_content h3:after{
+	background-color: #96ff06;
+}
+
+
+ .service_card_main h4{
+ 	font-weight: bold;
+ }	   
+
+ .service_card_main span{
+ 	display: block;
+ 	    color: grey;
+ }
+ .service_card{
+     background: rgb(71,119,3);
+background: radial-gradient(circle, rgba(71,119,3,1) 45%, rgba(73,125,1,1) 68%, rgba(25,40,5,1) 97%);
+    padding: 100% 3% 3% 3%;
+    margin-top: 100%;
+ }
+ .service_card_main{
+ 	background-color: white;
+ 	text-align: center;
+ 	    padding: 20px 0px;
+ }
+ .service_card_main a{
+    margin-top: 15%;
+    background: #96ff06;
+    color: white;
+    padding: 4px 15px;
+    display: inline-block;
+    border-radius: 5px;
+ }
+ .testimonial_about p{
+ 	font-size: 14px;
+ 	color: white;
+ }
+ .testimonial_about_main{
+    padding: 45px 15px;
+    }
+     .testimonial_about_main{
+     	position: relative;
+     	    background: #212529;
+     }
+    .testimonial_about_main:after{
+position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 0px solid transparent;
+    border-right: 65px solid transparent;
+    border-top: 45px solid #212529;
+    font-size: 0;
+    line-height: 0;
+    bottom: -11%;
+    left: 10%;
+    }
+    .testimonial_about h4{
+    	      margin-top: 15%;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 0;
+    }
+    .testimonial_about{
+    	margin-top: 20%;
+    }
+
+    /*......................product page.............*/
+    .product_view_zoom{
+    	padding-top: 5%;
+    	    padding-bottom: 2%;
+    }
+    .iz {
+  position: relative;
+  display: block;
+  margin: 0;
+  cursor: crosshair;
+}
+.iz:hover {
+  overflow: visible;
+}
+.iz:hover .iz__zoom {
+  opacity: 1;
+}
+.iz:hover .iz__zoom-pic {
+  will-change: margin-top, margin-right, margin-bottom, margin-left;
+  transform: translate3d(0, 0, 0);
+  background: #eee;
+}
+.iz__zoom {
+  position: absolute;
+  opacity: 0;
+  background: #ddd;
+  transition: opacity 0.4s;
+  /*set dimensions of zoom-window */
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  margin-left: 10px;
+  pointer-events: none;
+  z-index: 9;
+}
+.iz__zoom-pic {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  will-change: auto;
+}
+
+.global {
+  font: 0.9em/1.4 sans-serif;
+  color: #efefef;
+}
+.global body {
+  padding: 40px 20px;
+  background: #26282c;
+}
+.rating_main p{
+	    font-size: 14px;
+	    color: #9b9b9b;
+	        margin-top: 5%;
+    margin-bottom: 5%;
+}
+.product_view_zoom .category ul li{
+	font-weight: bold;
+	    font-family: 'Rajdhani', sans-serif;
+	    line-height: 30px;
+}
+.product_view_zoom .category ul li span{
+	font-size: 14px;
+	font-weight: normal;
+	color: #9b9b9b;
+	margin-left: 2%;
+}
+.no_flex{
+	display: inherit;
+	padding-top: 0;
+}
+.no_flex .rating i{
+	font-size: 30px;
+}
+.no_flex h6{
+	margin-bottom: 3%;
+}
+.product_view_zoom .category ul li span i{
+	margin-right: 2%;
+}
+.comment_box {
+	    padding: 20px 50px;
+    background: #f6f6f6;
+        font-family: 'Rajdhani', sans-serif;
+        font-weight: bold;
+            margin-bottom: 2%;
+}
+.comment_box textarea{
+	width: 100%;
+}
+.comment_box_comment{
+	text-align: right;
+}
+.comment_box_comment a{
+	    background: #96ff06;
+    padding: 4px 37px;
+    display: inline-block;
+    color: white;
+    border-radius: 5px;
+}
+.recent_comments h6{
+	font-size: 20px;
+    font-weight: bold;
+}
+.recent_comments p{
+	font-size: 14px;
+}
+.comment_date span{
+	    background: #96ff06;
+    color: white;
+    padding: 7px 25px;
+    display: inline-block;
+    border-radius: 30px 0px 0px 30px;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 10%;
+}
+.comment_date{
+	text-align: right;
+	padding-right: 50px;
+}
+.product_post .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+	    color: #495057;
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff;
+    border: none;
+    border-bottom: 2px solid #96ff06;
+}
+.product_post .nav-tabs{
+	padding-bottom: 2%;
+}
+.product_post .nav-tabs .nav-link{
+	    font-size: 14px;
+    font-weight: bold;
+}
+.description_comment{
+	    padding-bottom: 5%;
+    padding-top: 3%;
+}
+
+.map_location{
+	margin-top: 30%;
+}

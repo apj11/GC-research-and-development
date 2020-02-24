@@ -42,43 +42,43 @@
     </div><!-- row -->
   </div><!-- container -->
 </section><!-- top_head -->
-<div class="top_navigation top_navigation2 nav_no_pos">
-  <div class="container">
-   <nav class="navbar navbar-expand-lg navbar-light">
-     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-       <span class="navbar-toggler-icon"></span>
-     </button>
-     <div class="collapse navbar-collapse" id="navbarNav">
-       <ul class="navbar-nav navbar-nav2">
-        <li class="nav-item active">
-         <a class="nav-link" href="{{route('index')}}">HOME<span class="sr-only">(current)</span></a>
-       </li>
-       <li class="nav-item">
-         <a class="nav-link hvr-underline-from-center" href="#">PRODUCTS</a>
-       </li>
-       <li class="nav-item">
-         <a class="nav-link hvr-underline-from-center" href="{{route('galleries.index')}}">GALLERY</a>
-       </li>
-       <li class="nav-item">
-         <a class="nav-link hvr-underline-from-center" href="#">ABOUT US</a>
-       </li>
-       <li class="nav-item">
-         <a class="nav-link hvr-underline-from-center" href="{{route('blogs.index')}}">BLOG</a>
-       </li>
-       <li class="nav-item">
-         <a class="nav-link hvr-underline-from-center" href="#">CONTACT</a>
-       </li>
+  <div class="top_navigation top_navigation2 nav_no_pos">
+      <div class="container">
+          <nav class="navbar navbar-expand-lg navbar-light">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav navbar-nav2">
+                      <li class="nav-item active">
+                          <a class="nav-link" href="{{route('index')}}">HOME<span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link hvr-underline-from-center" href="{{route('products.index')}}">PRODUCTS</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link hvr-underline-from-center" href="{{route('galleries.index')}}">GALLERY</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link hvr-underline-from-center" href="{{route('abouts.index')}}">ABOUT US</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link hvr-underline-from-center" href="{{route('blogs.index')}}">BLOG</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link hvr-underline-from-center" href="{{route('contacts.index')}}">CONTACT</a>
+                      </li>
 
-     </ul>
-   </div>
-   <div class="login_top">
-     <a href="#" class="btn_default">Login/Register</a>
-   </div><!-- login_top -->
- </nav>
-</div><!-- container -->
-</div><!-- top_navigation -->
+                  </ul>
+              </div>
+              <div class="login_top">
+                  <a href="#" class="btn_default">Login/Register</a>
+              </div><!-- login_top -->
+          </nav>
+      </div><!-- container -->
+  </div>
 
-<section class="inner_slider_banner">
+  <section class="inner_slider_banner">
   <div class="inner_slider_banner_overlay">
 
   </div><!-- inner_slider_banner_overlay -->
@@ -219,13 +219,13 @@
               <div class="footer-title">
                 <h4 class="title">USEFUL LINKS</h4>
               </div>
-              <ul class="link">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Blogs</a></li>
-                <li><a href="#">Gallery</a></li>
-              </ul>
+                <ul class="link">
+                    <li><a href="{{route('index')}}">Home</a></li>
+                    <li><a href="{{route('abouts.index')}}">About</a></li>
+                    <li><a href="{{route('products.index')}}">Products</a></li>
+                    <li><a href="{{route('blogs.index')}}">Blogs</a></li>
+                    <li><a href="{{route('galleries.index')}}">Gallery</a></li>
+                </ul>
             </div> <!-- footer wrapper -->
 
           </div> <!-- footer link -->

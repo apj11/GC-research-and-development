@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Frontend;
-
+use App\Gallery;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -14,7 +14,10 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        return view('frontend.gallery');
+        $gallery=Gallery::paginate(8);
+        return view('frontend.gallery')
+            ->with('gallery',$gallery)
+            ;
     }
 
     /**

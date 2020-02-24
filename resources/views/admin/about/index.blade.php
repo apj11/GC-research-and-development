@@ -273,6 +273,7 @@
                     <th class="wd-10p">S.N.</th>
                     <th class="wd-10p">Title</th>
                     <th class="wd-20p">Desciption</th>
+                    <th class="wd-20p">Image</th>
 
 {{--                    <th class="wd-15p">Address</th>--}}
 {{--                    --}}{{--                    <th class="wd-15p">Reg.no</th>--}}
@@ -290,6 +291,7 @@
                         <td>{{++$key}}</td>
                         <td>{!! $about->title !!}</td>
                         <td>{!! $about->description !!}</td>
+                        <td ><img src="{{asset(''.$about->image)}}" height="100px" width="100px"></td>
 
 {{--                        --}}{{--                    <td>{{$customer->companyName}}</td>--}}
 {{--                        <td>{{$customer->address}}</td>--}}

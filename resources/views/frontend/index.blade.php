@@ -70,19 +70,19 @@
 							<a class="nav-link" href="{{route('index')}}">HOME<span class="sr-only">(current)</span></a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link hvr-underline-from-center" href="#">PRODUCTS</a>
+							<a class="nav-link hvr-underline-from-center" href="{{route('products.index')}}">PRODUCTS</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link hvr-underline-from-center" href="{{route('galleries.index')}}">GALLERY</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link hvr-underline-from-center" href="#">ABOUT US</a>
+							<a class="nav-link hvr-underline-from-center" href="{{route('abouts.index')}}">ABOUT US</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link hvr-underline-from-center" href="{{route('blogs.index')}}">BLOG</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link hvr-underline-from-center" href="#">CONTACT</a>
+							<a class="nav-link hvr-underline-from-center" href="{{route('contacts.index')}}">CONTACT</a>
 						</li>
 					</ul>
 				</div>
@@ -94,42 +94,23 @@
 	</section><!-- slider_main -->
 	<section class="award">
 		<div class="row no-pad">
+            @foreach($award as $awards)
 			<div class="col-md-4">
 				<div class="award_blk">
 					<div class="image_blk">
 						<i class="fas fa-award"></i>
 					</div><!-- image_blk -->
+
 					<div class="award_lead">
-						<h6>AWARD1</h6>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-						<a href="#" class="btn_default"> VIEW MORE</a>
+						<h6>{{$awards->title}}</h6>
+						<p>{{$awards->description}}</p>
+						<a href="{{route('abouts.show', $awards->id)}}" class="btn_default"> VIEW MORE</a>
 					</div><!-- award_lead -->
+
 				</div><!-- award_blk -->
+
 			</div><!-- col -->
-			<div class="col-md-4">
-				<div class="award_blk">
-					<div class="image_blk">
-						<i class="fas fa-award"></i>
-					</div><!-- image_blk -->
-					<div class="award_lead">
-						<h6>AWARD1</h6>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-						<a href="#" class="btn_default"> VIEW MORE</a>
-					</div><!-- award_lead -->
-				</div><!-- award_blk -->
-			</div><!-- col -->
-			<div class="col-md-4">
-				<div class="award_blk">
-					<div class="image_blk">
-						<i class="fas fa-award"></i>
-					</div><!-- image_blk -->
-					<div class="award_lead">
-						<h6>AWARD1</h6>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-						<a href="#" class="btn_default"> VIEW MORE</a>
-					</div><!-- award_lead -->
-				</div><!-- award_blk -->
-			</div><!-- col -->
+            @endforeach
 		</div><!-- row -->
 	</section><!-- award -->
 
@@ -200,7 +181,7 @@
 									</div><!-- product_overlay_content -->
 								</div><!-- product_blk -->
 								<div class="rating_blk">
-									<h6>Product 2</h6>
+									<h6>Product 1</h6>
 									<div class="rating">
 										<input id="rating-5" type="radio" name="rating" value="5"/><label for="rating-5"><i class="fas fa-3x fa-star"></i></label>
 										<input id="rating-4" type="radio" name="rating" value="4" checked /><label for="rating-4"><i class="fas fa-3x fa-star"></i></label>
@@ -212,52 +193,52 @@
 
 							</div><!-- product_blk_head -->
 						</div><!-- col -->
-						<div class="col-md-4">
-							<div class="product_blk_head">
-								<div class="product_blk">
-									<i claFss="fas fa-cogs"></i>
-									<div class="product_overlay_content">
-										<a href="#">
-											<i class="far fa-comments"></i>
-										</a>
-										<a href="#"><i class="far fa-star"></i></a>
-									</div><!-- product_overlay_content -->
-								</div><!-- product_blk -->
-								<div class="rating_blk">
-									<h6>SOX MACHINE</h6>
-									<div class="rating">
-										<input id="rating-10" type="radio" name="rating" value="5"/><label for="rating-10"><i class="fas fa-3x fa-star"></i></label>
-										<input id="rating-9" type="radio" name="rating" value="4" checked /><label for="rating-9"><i class="fas fa-3x fa-star"></i></label>
-										<input id="rating-8" type="radio" name="rating" value="3"/><label for="rating-8"><i class="fas fa-3x fa-star"></i></label>
-										<input id="rating-7" type="radio" name="rating" value="2"/><label for="rating-7"><i class="fas fa-3x fa-star"></i></label>
-										<input id="rating-6" type="radio" name="rating" value="1"/><label for="rating-6"><i class="fas fa-3x fa-star"></i></label>
-									</div>
-								</div><!-- rating_blk -->
-							</div><!-- product_blk_head -->
-						</div><!-- col -->
-						<div class="col-md-4">
-							<div class="product_blk_head">
-								<div class="product_blk">
-									<i class="fas fa-cogs"></i>
-									<div class="product_overlay_content">
-										<a href="#">
-											<i class="far fa-comments"></i>
-										</a>
-										<a href="#"><i class="far fa-star"></i></a>
-									</div><!-- product_overlay_content -->
-								</div><!-- product_blk -->
-								<div class="rating_blk">
-									<h6>Product 3</h6>
-									<div class="rating">
-										<input id="rating-15" type="radio" name="rating" value="5"/><label for="rating-15"><i class="fas fa-3x fa-star"></i></label>
-										<input id="rating-14" type="radio" name="rating" value="4" checked /><label for="rating-14"><i class="fas fa-3x fa-star"></i></label>
-										<input id="rating-13" type="radio" name="rating" value="3"/><label for="rating-13"><i class="fas fa-3x fa-star"></i></label>
-										<input id="rating-12" type="radio" name="rating" value="2"/><label for="rating-12"><i class="fas fa-3x fa-star"></i></label>
-										<input id="rating-11" type="radio" name="rating" value="1"/><label for="rating-11"><i class="fas fa-3x fa-star"></i></label>
-									</div>
-								</div><!-- rating_blk -->
-							</div><!-- product_blk_head -->
-						</div><!-- col -->
+                        <div class="col-md-4">
+                            <div class="product_blk_head">
+                                <div class="product_blk">
+                                    <i class="fas fa-cogs"></i>
+                                    <div class="product_overlay_content">
+                                        <a href="#">
+                                            <i class="far fa-comments"></i>
+                                        </a>
+                                        <a href="#"><i class="far fa-star"></i></a>
+                                    </div><!-- product_overlay_content -->
+                                </div><!-- product_blk -->
+                                <div class="rating_blk">
+                                    <h6>Product 2</h6>
+                                    <div class="rating">
+                                        <input id="rating-15" type="radio" name="rating" value="5"/><label for="rating-15"><i class="fas fa-3x fa-star"></i></label>
+                                        <input id="rating-14" type="radio" name="rating" value="4" checked /><label for="rating-14"><i class="fas fa-3x fa-star"></i></label>
+                                        <input id="rating-13" type="radio" name="rating" value="3"/><label for="rating-13"><i class="fas fa-3x fa-star"></i></label>
+                                        <input id="rating-12" type="radio" name="rating" value="2"/><label for="rating-12"><i class="fas fa-3x fa-star"></i></label>
+                                        <input id="rating-11" type="radio" name="rating" value="1"/><label for="rating-11"><i class="fas fa-3x fa-star"></i></label>
+                                    </div>
+                                </div><!-- rating_blk -->
+                            </div><!-- product_blk_head -->
+                        </div><!-- col -->
+                        <div class="col-md-4">
+                            <div class="product_blk_head">
+                                <div class="product_blk">
+                                    <i class="fas fa-cogs"></i>
+                                    <div class="product_overlay_content">
+                                        <a href="#">
+                                            <i class="far fa-comments"></i>
+                                        </a>
+                                        <a href="#"><i class="far fa-star"></i></a>
+                                    </div><!-- product_overlay_content -->
+                                </div><!-- product_blk -->
+                                <div class="rating_blk">
+                                    <h6>Product 3</h6>
+                                    <div class="rating">
+                                        <input id="rating-15" type="radio" name="rating" value="5"/><label for="rating-15"><i class="fas fa-3x fa-star"></i></label>
+                                        <input id="rating-14" type="radio" name="rating" value="4" checked /><label for="rating-14"><i class="fas fa-3x fa-star"></i></label>
+                                        <input id="rating-13" type="radio" name="rating" value="3"/><label for="rating-13"><i class="fas fa-3x fa-star"></i></label>
+                                        <input id="rating-12" type="radio" name="rating" value="2"/><label for="rating-12"><i class="fas fa-3x fa-star"></i></label>
+                                        <input id="rating-11" type="radio" name="rating" value="1"/><label for="rating-11"><i class="fas fa-3x fa-star"></i></label>
+                                    </div>
+                                </div><!-- rating_blk -->
+                            </div><!-- product_blk_head -->
+                        </div><!-- col -->
 					</div><!-- row -->
 				</div><!-- col -->
 			</div><!-- row -->
@@ -271,45 +252,45 @@
 			</div><!-- product_head -->
 			<div class="gallery_content">
 				<div class="row">
+                    @foreach($gallery as $key=>$gal)
+                        @if($key == 0)
 					<div class="col-md-6 no-pad">
 						<div class="gallery_grid padding_right02p">
-							<img src="images/580-10.jpeg" width="580" height="400">
+							<img src="{{asset(''.$gal->image)}}" width="580" height="400">
 							<div class="all_gallery_link">
-								<a href="#">ALL WE GOT</a>
+								<a href="{{route('galleries.index')}}">ALL WE GOT</a>
 							</div><!-- all_gallery_link -->
 						</div><!-- gallery_grid -->
 					</div><!-- col -->
+                        @endif
+                            @if($key> 0)
 					<div class="col-md-3 no-pad">
-						<div class="gallery_grid_more padding_right02p">
-							<img src="images/s425361601631838882_p2359_i1_w2560.jpeg" width="200" height="200">
-							<div class="gallery_overlay">
-								<a href="#"><i class="fas fa-arrow-right"></i></a>
-							</div><!-- gallery_overlay -->
-						</div><!-- gallery_grid_more -->
+                        @if($key == 1)
 						<div class="gallery_grid_more padding_top1p padding_right02p">
-							<img src="images/2314BF22-22CA-4DD7-AFF7-A49B0194B61B.jpeg.ca0f10f248c17102dfbf5414afec07d9.jpeg" width="200" height="200">
+							<img src="{{asset(''.$gal->image)}}" width="200" height="200">
 							<div class="gallery_overlay">
-								<a href="#"><i class="fas fa-arrow-right"></i></a>
+								<a href="{{route('galleries.index')}}"><i class="fas fa-arrow-right"></i></a>
 							</div><!-- gallery_overlay -->
 						</div><!-- gallery_grid_more -->
+                        @endif
+
+                        @if($key == 2)
+
+                        <div class="gallery_grid_more">
+                            <img src="{{asset(''.$gal->image)}}" width="200" height="200">
+                            <div class="gallery_overlay">
+                                <a href="{{route('galleries.index')}}"><i class="fas fa-arrow-right"></i></a>
+                            </div><!-- gallery_overlay -->
+                            <div class="gallery_overlay">
+                                <a href="{{route('galleries.index')}}"><i class="fas fa-arrow-right"></i></a>
+                            </div><!-- gallery_overlay -->
+                        </div><!-- gallery_grid_more -->
+                            @endif
+
 					</div><!-- col -->
-					<div class="col-md-3 no-pad">
-						<div class="gallery_grid_more">
-							<img src="images/IMG_2473.jpg" width="200" height="200">
-							<div class="gallery_overlay">
-								<a href="#"><i class="fas fa-arrow-right"></i></a>
-							</div><!-- gallery_overlay -->
-							<div class="gallery_overlay">
-								<a href="#"><i class="fas fa-arrow-right"></i></a>
-							</div><!-- gallery_overlay -->
-						</div><!-- gallery_grid_more -->
-						<div class="gallery_grid_more padding_top02p">
-							<img src="images/94171ecd-83b9-46d8-b794-79562089851d.jpeg" width="200" height="200">
-							<div class="gallery_overlay">
-								<a href="#"><i class="fas fa-arrow-right"></i></a>
-							</div><!-- gallery_overlay -->
-						</div><!-- gallery_grid_more -->
-					</div><!-- col -->
+                            @endif
+                        @endforeach
+
 				</div><!-- row -->
 			</div><!-- gallery_content -->
 			<div class="show_all_gal text-center">
@@ -464,11 +445,11 @@
 									<h4 class="title">USEFUL LINKS</h4>
 								</div>
 								<ul class="link">
-									<li><a href="#">Home</a></li>
-									<li><a href="#">About</a></li>
-									<li><a href="#">Products</a></li>
-									<li><a href="#">Blogs</a></li>
-									<li><a href="#">Gallery</a></li>
+									<li><a href="{{route('index')}}">Home</a></li>
+									<li><a href="{{route('abouts.index')}}">About</a></li>
+									<li><a href="{{route('products.index')}}">Products</a></li>
+									<li><a href="{{route('blogs.index')}}">Blogs</a></li>
+									<li><a href="{{route('galleries.index')}}">Gallery</a></li>
 								</ul>
 							</div> <!-- footer wrapper -->
 						</div> <!-- footer link -->
@@ -482,7 +463,7 @@
 								<ul class="link">
 									<li><i class="fas fa-map-marker-alt"></i><p>Tinkune-32,Kathmandu <span>Nepal</span></p></li>
 									<li><i class="fas fa-mobile-alt"></i><p>+977 014111992 <span>+977 9841674653</span></p></li>
-									<li><i class="far fa-envelope"></i><a href="#">support@softechpark.comf<span>info@softechpark.com</span></a></li>
+									<li><i class="far fa-envelope"></i><a href="#">support@softechpark.com<span>info@softechpark.com</span></a></li>
 								</ul>
 							</div> <!-- footer wrapper -->
 						</div><!-- footer-link -->
@@ -511,7 +492,7 @@
 					<div class="offset-md-3 col-md-3">
 						<div class="footer_end_social">
 							<ul class="clearfix">
-								<li class="icon_bg1"><a href="https://www.facebook.com/Softechpark4"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+								<li class="icon_bg1"><a href="https://www.facebook.com/Softechpark"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
 								<li class="icon_bg2"><a href="https://twitter.com/softechpark"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
 								<li class="icon_bg1"><a href=""><i class="fab fa-instagram" aria-hidden="true"></i></a>
 								</li>

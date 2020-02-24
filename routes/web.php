@@ -21,8 +21,8 @@ Route::resource('/','Frontend\IndexController');
 Route::resource('abouts','Frontend\AboutController');
 Route::resource('events','Frontend\EventController');
 Route::resource('galleries','Frontend\GalleryController');
-Route::resource('downloads','Frontend\DownloadController');
 Route::resource('contacts','Frontend\ContactController');
+Route::resource('products','Frontend\ProductController');
 Route::resource('blogs','Frontend\BlogController');
 Route::resource('/blogdetails','Frontend\BlogdetailController');
 
@@ -32,6 +32,10 @@ Route::group(['middleware' => ['auth:admin']], function() {
 
     Route::resource('/about','Admin\AboutController');
     Route::get('/about/delete/{id}','Admin\AboutController@destroy')->name('about.destroy');
+
+    Route::resource('/award','Admin\AwardController');
+    Route::get('/award/delete/{id}','Admin\AwardController@destroy')->name('award.destroy');
+
 
     Route::resource('/slider','Admin\SliderController');
     Route::resource('/service','Admin\ServiceController');

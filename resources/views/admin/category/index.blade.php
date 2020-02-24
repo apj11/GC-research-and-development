@@ -272,7 +272,7 @@
                     {{--                    <th class="wd-10p">S.N</th>--}}
                     <th class="wd-10p">S.N.</th>
                     <th class="wd-20p">Title</th>
-                    <th class="wd-20p">Image</th>
+{{--                    <th class="wd-20p">Image</th>--}}
 
 {{--                    <th class="wd-15p">History</th>--}}
 {{--                    <th class="wd-15p">Address</th>--}}
@@ -290,8 +290,7 @@
                     <tr id="category{{$category->id}}">
                         <td>{{++$key}}</td>
                         <td>{!! $category->title !!}</td>
-                        <td ><img src="{{asset(''.$category->image)}}" height="100px" width="100px"></td>
-
+                       {{-- <td ><img src="{{asset(''.$category->image)}}" height="100px" width="100px"></td>--}}
 
 {{--                        <td>{!! $about->history !!}</td>--}}
 {{--                        --}}{{--                    <td>{{$customer->companyName}}</td>--}}

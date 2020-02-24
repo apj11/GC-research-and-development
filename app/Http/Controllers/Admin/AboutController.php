@@ -41,8 +41,14 @@ class AboutController extends Controller
         ]);
         $about=new About();
         $about->title=$request->get('title');
-
         $about->description =$request->get('description');
+        if($request->hasFile('image')){
+            $image=$request->file('image');
+            $image_new_name=time().$image->getClientOriginalName();
+            $destination='uploads/topwide';
+            $image->move($destination,$image_new_name);
+            $about->image = '/uploads/topwide/'.$image_new_name;
+        }
 
         $about->save();
         return back()->with('success','Data has been added successfully');
@@ -81,10 +87,10 @@ class AboutController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request,[
-            // 'title'=>'required',
+             'title'=>'required',
                 'description'=>'required',
-            // 'history'=>'required',
-//
+
+
         ]);
 
 
@@ -93,8 +99,15 @@ class AboutController extends Controller
         {
 
             $about->title=$request->get('title');
-//
+            if($request->hasFile('image')){
+                $image=$request->file('image');
+                $image_new_name=time().$image->getClientOriginalName();
+                $destination='uploads/topwide';
+                $image->move($destination,$image_new_name);
+                $about->image = '/uploads/topwide/'.$image_new_name;
+            }
             $about->description =$request->get('description');
+
 
 //
         }

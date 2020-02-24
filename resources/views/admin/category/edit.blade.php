@@ -40,20 +40,22 @@
                     </div>
 
 
-                    <div class="form-group">
-                        <label class="col-md-3 control-label" for="product-name">Image</label>
-                        <div class="col-md-9">
-                            <input type="file" id="image" name="image" class="form-control {{ $errors->has('image') ? 'has-error' : '' }}"  value="{{ old('image', isset($about) ? $about->image : '') }}">
+{{--                    <div class="form-group">--}}
+{{--                        <label class="col-md-3 control-label" for="product-name">Image</label>--}}
+{{--                        <div class="col-md-9">--}}
+{{--                            <input type="file" id="image" name="image" class="form-control {{ $errors->has('image') ? 'has-error' : '' }}"  value="{{ old('image', isset($about) ? $about->image : '') }}">--}}
 
 
-                            @if ($errors->has('image'))
-                                <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('image') }}</strong>
-                                    </span>
-                            @endif
+{{--                            @if ($errors->has('image'))--}}
+{{--                                <span class="invalid-feedback" role="alert">--}}
+{{--                                        <strong>{{ $errors->first('image') }}</strong>--}}
+{{--                                    </span>--}}
+{{--                            @endif--}}
 
-                        </div>
-                    </div>
+{{--                        </div>--}}
+{{--                    </div>--}}
+
+
 
 {{--                    <div class="form-group">--}}
 {{--                        <label class="col-md-3 control-label" for="product-description">Description</label>--}}
