@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Testimonial;
 use App\Blog;
+use App\Productdetails;
 use App\Gallery;
 use App\Award;
 use Illuminate\Http\Request;
@@ -18,16 +19,17 @@ class IndexController extends Controller
      */
     public function index()
     {
-        $award=Award::all();
-
-        $blog=Blog::latest()->get();
+        $award=Award::latest()->get();
+        $productdetails=Productdetails::latest()->paginate(3);
+        $blog=Blog::latest()->paginate(2);
         $testimonial=Testimonial::all();
         $gallery=Gallery::all();
         return view ('frontend.index')
             ->with('testimonial',$testimonial)
             ->with('blog',$blog)
             ->with('award',$award)
-            ->with('gallery',$gallery);
+            ->with('gallery',$gallery)
+            ->with('productdetails',$productdetails);
     }
 
     /**

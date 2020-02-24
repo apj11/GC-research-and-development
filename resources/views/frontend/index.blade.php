@@ -169,19 +169,20 @@
 			<div class="row">
 				<div class="offset-2 col-md-8">
 					<div class="row">
+                        @foreach($productdetails as $productdetail)
 						<div class="col-md-4">
 							<div class="product_blk_head">
 								<div class="product_blk">
 									<i class="fas fa-cogs"></i>
 									<div class="product_overlay_content">
-										<a href="#">
+										<a href="{{route('productdetails.show', $productdetail->id)}}">
 											<i class="far fa-comments"></i>
 										</a>
-										<a href="#"><i class="far fa-star"></i></a>
+										<a href="{{route('productdetails.show', $productdetail->id)}}"><i class="far fa-star"></i></a>
 									</div><!-- product_overlay_content -->
 								</div><!-- product_blk -->
 								<div class="rating_blk">
-									<h6>Product 1</h6>
+									<h6>{{$productdetail->title}}</h6>
 									<div class="rating">
 										<input id="rating-5" type="radio" name="rating" value="5"/><label for="rating-5"><i class="fas fa-3x fa-star"></i></label>
 										<input id="rating-4" type="radio" name="rating" value="4" checked /><label for="rating-4"><i class="fas fa-3x fa-star"></i></label>
@@ -193,52 +194,7 @@
 
 							</div><!-- product_blk_head -->
 						</div><!-- col -->
-                        <div class="col-md-4">
-                            <div class="product_blk_head">
-                                <div class="product_blk">
-                                    <i class="fas fa-cogs"></i>
-                                    <div class="product_overlay_content">
-                                        <a href="#">
-                                            <i class="far fa-comments"></i>
-                                        </a>
-                                        <a href="#"><i class="far fa-star"></i></a>
-                                    </div><!-- product_overlay_content -->
-                                </div><!-- product_blk -->
-                                <div class="rating_blk">
-                                    <h6>Product 2</h6>
-                                    <div class="rating">
-                                        <input id="rating-15" type="radio" name="rating" value="5"/><label for="rating-15"><i class="fas fa-3x fa-star"></i></label>
-                                        <input id="rating-14" type="radio" name="rating" value="4" checked /><label for="rating-14"><i class="fas fa-3x fa-star"></i></label>
-                                        <input id="rating-13" type="radio" name="rating" value="3"/><label for="rating-13"><i class="fas fa-3x fa-star"></i></label>
-                                        <input id="rating-12" type="radio" name="rating" value="2"/><label for="rating-12"><i class="fas fa-3x fa-star"></i></label>
-                                        <input id="rating-11" type="radio" name="rating" value="1"/><label for="rating-11"><i class="fas fa-3x fa-star"></i></label>
-                                    </div>
-                                </div><!-- rating_blk -->
-                            </div><!-- product_blk_head -->
-                        </div><!-- col -->
-                        <div class="col-md-4">
-                            <div class="product_blk_head">
-                                <div class="product_blk">
-                                    <i class="fas fa-cogs"></i>
-                                    <div class="product_overlay_content">
-                                        <a href="#">
-                                            <i class="far fa-comments"></i>
-                                        </a>
-                                        <a href="#"><i class="far fa-star"></i></a>
-                                    </div><!-- product_overlay_content -->
-                                </div><!-- product_blk -->
-                                <div class="rating_blk">
-                                    <h6>Product 3</h6>
-                                    <div class="rating">
-                                        <input id="rating-15" type="radio" name="rating" value="5"/><label for="rating-15"><i class="fas fa-3x fa-star"></i></label>
-                                        <input id="rating-14" type="radio" name="rating" value="4" checked /><label for="rating-14"><i class="fas fa-3x fa-star"></i></label>
-                                        <input id="rating-13" type="radio" name="rating" value="3"/><label for="rating-13"><i class="fas fa-3x fa-star"></i></label>
-                                        <input id="rating-12" type="radio" name="rating" value="2"/><label for="rating-12"><i class="fas fa-3x fa-star"></i></label>
-                                        <input id="rating-11" type="radio" name="rating" value="1"/><label for="rating-11"><i class="fas fa-3x fa-star"></i></label>
-                                    </div>
-                                </div><!-- rating_blk -->
-                            </div><!-- product_blk_head -->
-                        </div><!-- col -->
+                            @endforeach
 					</div><!-- row -->
 				</div><!-- col -->
 			</div><!-- row -->

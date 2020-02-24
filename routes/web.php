@@ -23,6 +23,7 @@ Route::resource('events','Frontend\EventController');
 Route::resource('galleries','Frontend\GalleryController');
 Route::resource('contacts','Frontend\ContactController');
 Route::resource('products','Frontend\ProductController');
+Route::resource('productdetails','Frontend\ProductdetailController');
 Route::resource('blogs','Frontend\BlogController');
 Route::resource('/blogdetails','Frontend\BlogdetailController');
 
@@ -45,6 +46,10 @@ Route::group(['middleware' => ['auth:admin']], function() {
 
     Route::resource('/contact','Admin\ContactController');
     Route::get('/contact/delete/{id}','Admin\ContactController@destroy')->name('contact.destroy');
+
+    Route::resource('/productdetail','Admin\ProductdetailController');
+    Route::get('/productdetail/delete/{id}','Admin\ProductdetailController@destroy')->name('productdetail.destroy');
+
 
 
     Route::resource('/blog','Admin\BlogController');

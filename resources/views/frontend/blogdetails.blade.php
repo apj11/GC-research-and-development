@@ -98,7 +98,7 @@
       <div class="col-md-9">
 
         <div class="detail_content">
-          <img src="{{asset(''.$blogdetails->image)}}" alt="#">
+          <img src="{{asset(''.$blogdetails->image)}}" height="400px" alt="#">
           <div class="card-body card-body_detail">
             <h3 class="card-title">{{$blogdetails->title}}</h3>
             <span><i class="fas fa-user"></i> {{$blogdetails->name}}</span>

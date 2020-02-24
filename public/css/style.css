@@ -368,7 +368,7 @@ background: white;
 
 	.services .service_blk i{
 		font-size: 120px;
-	} 
+	}
 	.service_blk{
 		background-color: white;
 		padding-top: 20%;
@@ -1133,7 +1133,7 @@ color: white;
 	/*......................gallery page......................*/
 
 	.inner_slider_banner {
-		background-image: 
+		background-image:
 	}
 
 	.gallery_tab{
@@ -1210,14 +1210,14 @@ color: white;
     font-weight: bold;
     font-size: 14px;
     transition: 1s all;
-    text-align: center;	
+    text-align: center;
 }
 
 .inner_contact_btn a:hover{
 	background-color: black;
 	color: white;
 	transition: 1s all;
-}	
+}
 .inner_slider_banner{
 	      background-image: url(../images/restaurant.png);
     background-repeat: no-repeat;
@@ -1304,7 +1304,7 @@ color: white;
 		    font-size: 1rem;
 		    color: #9b9b9b;
 
-	}  
+	}
 	.card-body .btn{
 		       color: #212529;
     font-weight: bold;
@@ -1371,7 +1371,7 @@ color: white;
 		}
 			.inner_news_head h3{
 				font-size: 20px;
-    font-weight: 600;	
+    font-weight: 600;
     margin-bottom: 0;
 			}
 			.inner_news_head{
@@ -1442,7 +1442,7 @@ color: white;
  	.about_section{
  		padding-top: 4%;
  	}
- 	.about_section .nav-tabs{	
+ 	.about_section .nav-tabs{
  		display: inherit;
  	}
  	.about_section .nav-tabs i{
@@ -1471,7 +1471,7 @@ color: white;
  	}
  	.about_section .nav-tabs .active i{
  			color: black;
- 			
+
  	}
  	.about_section .nav-tabs .nav-item{
  		margin-left: 0;
@@ -1510,7 +1510,7 @@ color: white;
     border: 1px solid #9b9b9b;
                padding: 30px 40px;
  	}
-  
+
  	.overview_image img{
  		  height: 40px;
     width: 40px;
@@ -1568,7 +1568,7 @@ color: white;
 
  .service_card_main h4{
  	font-weight: bold;
- }	   
+ }
 
  .service_card_main span{
  	display: block;

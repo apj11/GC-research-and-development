@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{{asset('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css')}}">
     <link href="{{asset('css/hover.css')}}" type="text/css" rel="stylesheet"/>
     <link href="{{asset('css/style.css')}}" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="{{asset('dist/css/lightbox.min.css')}}">
 </head>
 <body>
   <section class="top_head">
@@ -108,33 +109,15 @@
 						<div class="gallery_grid_more padding_right02p">
 							<img src="{{asset(''.$gallery->image)}}" width="200" height="200">
 							<div class="gallery_overlay">
-								<a href="{{asset(''.$gallery->image)}}"><i class="fas fa-arrow-right"></i></a>
+                                <a  href="{{asset(''.$gallery->image)}}" data-lightbox="example-1">
+                                    <img class="example-image" src="{{asset(''.$gallery->image)}}">
+                                </a>
 							</div><!-- gallery_overlay -->
 						</div><!-- gallery_grid_more -->
         </div>
-                @endforeach
+        @endforeach
   	</div><!-- row -->
-  	<div class="pagination">
-  		<nav aria-label="Page navigation example">
-  <ul class="pagination">
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-        <span class="sr-only">Previous</span>
-      </a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-        <span class="sr-only">Next</span>
-      </a>
-    </li>
-  </ul>
-</nav>
-  	</div><!-- pagination -->
+  	<!-- pagination -->
   </div>
   <div class="tab-pane fade" id="video" role="tabpanel" aria-labelledby="video-tab">
   	<!--Carousel Wrapper-->
@@ -340,8 +323,13 @@
 	</div><!-- container -->
 </section>
 
-
-
+  <script type="text/javascript">
+      $(function () {
+          $("#mdb-lightbox-ui").load("mdb-addons/mdb-lightbox-ui.html");
+      });
+  </script>
+  <script src="{{asset('dist/js/lightbox-plus-jquery.min.js')}}"></script>
+  <script src="{{asset('dist/js/lightbox.js')}}"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>

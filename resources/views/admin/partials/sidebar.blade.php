@@ -68,13 +68,13 @@
 {{--              </nav>--}}
 {{--            </li>--}}
 
-            {{--<li class="nav-item">
-                <a href="" class="nav-link with-sub"><i data-feather="layout"></i>Teacher Details</a>
+            <li class="nav-item">
+                <a href="" class="nav-link with-sub"><i data-feather="layout"></i>Product Details</a>
                 <nav class="nav nav-sub">
-                    <a href="{{route('teacherdetail.create')}}" class="nav-sub-link">New About</a>
-                    <a href="{{route('teacherdetail.index')}}" class="nav-sub-link">All About</a>
+                    <a href="{{route('productdetail.create')}}" class="nav-sub-link">New Product</a>
+                    <a href="{{route('productdetail.index')}}" class="nav-sub-link">All Product</a>
                 </nav>
-            </li>--}}
+            </li>
 
 
           {{--  <li class="nav-item">

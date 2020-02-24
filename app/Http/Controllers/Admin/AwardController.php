@@ -91,6 +91,7 @@ class AwardController extends Controller
      */
     public function update(Request $request, $id)
     {
+
         $this->validate($request,[
             'title'=>'required',
             'image'=>'required',
@@ -113,8 +114,6 @@ class AwardController extends Controller
                 $award->image = '/uploads/topwide/'.$image_new_name;
             }
             $award->description =$request->get('description');
-
-
 
         }
 
