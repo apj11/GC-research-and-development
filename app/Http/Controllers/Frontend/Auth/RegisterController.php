@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Frontend;
-use App\Blog;
+namespace App\Http\Controllers\Frontend\Auth;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class BlogdetailController extends Controller
+class RegisterController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +14,7 @@ class BlogdetailController extends Controller
      */
     public function index()
     {
-        $blog=Blog::latest()->paginate(2);
-        $data['blogs'] = Blog::all();
-        return view('frontend.blogdetails', $data)
-            ->with('blog',$blog);
+        //
     }
 
     /**
@@ -49,11 +46,7 @@ class BlogdetailController extends Controller
      */
     public function show($id)
     {
-        $blog=Blog::latest()->paginate(6);
-        $data['blogdetail'] = Blog::findOrFail($id);
-//        dd($data);
-        return view('frontend.blogdetails', $data)->with('blogdetail',$data)
-        ->with('blog',$blog);
+        //
     }
 
     /**

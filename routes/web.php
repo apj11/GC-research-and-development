@@ -59,6 +59,9 @@ Route::group(['middleware' => ['auth:admin']], function() {
     Route::resource('/category','Admin\CategoryController');
     Route::get('/category/delete/{id}','Admin\CategoryController@destroy')->name('category.destroy');
 
+    Route::resource('/partner','Admin\PartnerController');
+    Route::get('/partner/delete/{id}','Admin\PartnerController@destroy')->name('partner.destroy');
+
 
     Route::resource('/testimonial', 'Admin\TestimonialController');
     Route::get('/testimonial/delete/{id}','Admin\TestimonialController@destroy')->name('testimonial.destroy');

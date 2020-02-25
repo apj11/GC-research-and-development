@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Productdetails;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use App\Blog;
 class ProductdetailController extends Controller
 {
     /**
@@ -14,8 +14,10 @@ class ProductdetailController extends Controller
      */
     public function index()
     {
+        $blog=Blog::latest()->paginate(2);
         $data['productdetails'] =Productdetails::all();
-        return view('frontend.productdetails', $data);
+        return view('frontend.productdetails', $data)
+            ->with('blog',$blog);
     }
 
     /**
@@ -47,9 +49,11 @@ class ProductdetailController extends Controller
      */
     public function show($id)
     {
+        $blog=Blog::all();
         $data['productdetails'] = Productdetails::findOrFail($id);
 //        dd($data);
-        return view('frontend.productdetails', $data)->with('productdetails',$data);
+        return view('frontend.productdetails', $data)->with('productdetails',$data)
+        ->with('blog',$blog);
     }
 
     /**

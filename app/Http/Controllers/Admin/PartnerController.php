@@ -1,12 +1,11 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-use App\Gallery;
-use App\Category;
+use App\Partner;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class GalleryController extends Controller
+class PartnerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,11 +14,9 @@ class GalleryController extends Controller
      */
     public function index()
     {
-    $category=Category::all();
-    $gallery= Gallery::all();
-       return view('admin.gallery.index')
-       ->with('category',$category)
-       ->with('gallery',$gallery);
+        $partner=Partner::all();
+        return view('admin.partner.index')
+            ->with('partner',$partner);
     }
 
     /**
@@ -29,8 +26,7 @@ class GalleryController extends Controller
      */
     public function create()
     {
-       $category=Category::all();
-        return view('admin.gallery.create')->with('category',$category);
+        return view('admin.partner.create');
     }
 
     /**
@@ -41,27 +37,26 @@ class GalleryController extends Controller
      */
     public function store(Request $request)
     {
+
         $this->validate($request,[
+            'title'=>'required',
+
             'image'=>'required',
-            'category_id'=>'required'
 
 
         ]);
-        $gallery =new Gallery();
+        $partner =new Partner();
+        $partner->title=$request->get('title');
         if($request->hasFile('image')){
             $image=$request->file('image');
             $image_new_name=time().$image->getClientOriginalName();
             $destination='uploads/topwide';
             $image->move($destination,$image_new_name);
-            $gallery->image = '/uploads/topwide/'.$image_new_name;
+            $partner->image = '/uploads/topwide/'.$image_new_name;
         }
-        $gallery->category_id=$request->get('category_id');
 
-
-        $gallery->save();
-        return back()->with('success','Data has been added successfully');
-
-
+        $partner->save();
+        return back()->with('success','data has been added successfully');
     }
 
     /**
@@ -83,10 +78,7 @@ class GalleryController extends Controller
      */
     public function edit($id)
     {
-        $category=category::all();
-        $gallery=Gallery::find(id);
-        return view('admin.gallery.edit')->with('category',$category)
-        ->with('gallery',$gallery);
+
     }
 
     /**
@@ -98,26 +90,28 @@ class GalleryController extends Controller
      */
     public function update(Request $request, $id)
     {
-         $this->validate($request,[
+        $this->validate($request,[
+            'title'=>'required',
+
             'image'=>'required',
-            'category_id'=>'required'
+
 
         ]);
-        $gallery =Gallery::find($id);
+        $partner =Partner::find($id);
         if($id)
         {
-        if($request->hasFile('image')){
-            $image=$request->file('image');
-            $image_new_name=time().$image->getClientOriginalName();
-            $destination='uploads/topwide';
-            $image->move($destination,$image_new_name);
-            $gallery->image = '/uploads/topwide/'.$image_new_name;
-        }
-        $gallery->category_id=$request->get('category_id');
-    }
+            $partner->title=$request->get('title');
+            if($request->hasFile('image')){
+                $image=$request->file('image');
+                $image_new_name=time().$image->getClientOriginalName();
+                $destination='uploads/topwide';
+                $image->move($destination,$image_new_name);
+                $partner->image = '/uploads/topwide/'.$image_new_name;
+            }
 
-        $gallery->save();
-        return back()->with('success','Data has been added successfully');
+        }
+        $partner->save();
+        return back()->with('success','data has been added successfully');
     }
 
     /**
@@ -128,8 +122,8 @@ class GalleryController extends Controller
      */
     public function destroy($id)
     {
-        $gallery=Gallery::find($id);
-        $gallery->delete();
-        return back()->with('success','Data has been deleted successfully');
+        $partner=Partner::find($id);
+        $partner->delete();
+        return back()->with('success','data has been deleted successfully');
     }
 }

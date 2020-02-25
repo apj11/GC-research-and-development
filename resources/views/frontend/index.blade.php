@@ -347,30 +347,13 @@
 					<div class="col">
 						<div class="brands_slider_container">
 							<div class="owl-carousel owl-theme brands_slider">
+                                @foreach($partner as $partners)
 								<div class="owl-item">
-									<div class="brands_item d-flex flex-column justify-content-center"><img src="images/carousel1.png" alt=""></div>
+									<div class="brands_item d-flex flex-column justify-content-center"><img src="{{asset(''.$partners->image)}}" alt=""></div>
 								</div>
-								<div class="owl-item">
-									<div class="brands_item d-flex flex-column justify-content-center"><img src="images/carousel2.png" alt=""></div>
-								</div>
-								<div class="owl-item">
-									<div class="brands_item d-flex flex-column justify-content-center"><img src="images/carousel3.png" alt=""></div>
-								</div>
-								<div class="owl-item">
-									<div class="brands_item d-flex flex-column justify-content-center"><img src="images/carousel4.png" alt=""></div>
-								</div>
-								<div class="owl-item">
-									<div class="brands_item d-flex flex-column justify-content-center"><img src="images/carousel1.png" alt=""></div>
-								</div>
-								<div class="owl-item">
-									<div class="brands_item d-flex flex-column justify-content-center"><img src="images/carousel2.png" alt=""></div>
-								</div>
-								<div class="owl-item">
-									<div class="brands_item d-flex flex-column justify-content-center"><img src="images/carousel3.png" alt=""></div>
-								</div>
-								<div class="owl-item">
-									<div class="brands_item d-flex flex-column justify-content-center"><img src="images/carousel4.png" alt=""></div>
-								</div>
+								@endforeach
+
+
 							</div> <!-- Brands Slider Navigation -->
 							<div class="brands_nav brands_prev"><i class="fas fa-chevron-left"></i></div>
 							<div class="brands_nav brands_next"><i class="fas fa-chevron-right"></i></div>
@@ -429,10 +412,11 @@
 							<div class="footer-title">
 								<h4 class="title">LATEST NEWS</h4>
 							</div>
+                            @foreach($blog as $blogs)
 							<ul class="news">
-								<li><img src="images/footer_thumbnail.png"><p><a href="#"> sox machine in market</a><span>August 08, 2018</span></p></li>
-								<li><img src="images/footer_thumbnail.png"><p><a href="#"> sox machine in market</a><span>August 08, 2018</span></p></li>
+								<li><img src="{{asset(''.$blogs->image)}}"><p><a href="{{route('blogdetails.show', $blogs->id)}}"> {{$blogs->title}}</a><span>{{$blogs->date}}</span></p></li>
 							</ul>
+                                @endforeach
 						</div> <!-- footer contact -->
 					</div>
 				</div> <!-- row -->

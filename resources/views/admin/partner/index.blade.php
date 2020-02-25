@@ -80,10 +80,10 @@
     {{--                </nav>--}}
     {{--            </li>--}}
     {{--            <li class="nav-item">--}}
-    {{--                <a href="" class="nav-link with-sub"><i data-feather="x-circle"></i> Product and Services</a>--}}
+    {{--                <a href="" class="nav-link with-sub"><i data-feather="x-circle"></i> gallery and Services</a>--}}
     {{--                <nav class="nav nav-sub">--}}
-    {{--                    <a href="page-404.html" class="nav-sub-link">Product</a>--}}
-    {{--                    <a href="page-404.html" class="nav-sub-link">Damage Product</a>--}}
+    {{--                    <a href="page-404.html" class="nav-sub-link">gallery</a>--}}
+    {{--                    <a href="page-404.html" class="nav-sub-link">Damage gallery</a>--}}
     {{--                    <a href="page-500.html" class="nav-sub-link">Catagories</a>--}}
     {{--                </nav>--}}
     {{--            </li>--}}
@@ -248,8 +248,8 @@
         <div>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Award</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">All Award</li>
+                    <li class="breadcrumb-item"><a href="#">gallery</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">All gallery</li>
                 </ol>
             </nav>
 
@@ -260,8 +260,8 @@
     </div><!-- content-header -->
     <div class="content-body content-body-calendar" style="margin-top: -50px;">
         <div class="d-md-flex justify-content-between">
-            <h4 class="content-title mg-t-10">Welcome to Award</h4>
-            <a href="{{route('award.create')}}" class="btn btn-sm btn-primary"> Add new About</a>
+            <h4 class="content-title mg-t-10">Welcome to gallery</h4>
+            <a href="{{route('partner.create')}}" class="btn btn-sm btn-primary"> Add new Partners</a>
             {{--            <button type="button" class="btn btn-sm btn-primary">Add  New Customer</button>--}}
         </div>
         <div class="component-section">
@@ -269,30 +269,38 @@
             <table id="example1" class="table">
                 <thead>
                 <tr>
-                    {{--                    <th class="wd-10p">S.N</th>--}}
-                    <th class="wd-10p">S.N.</th>
-                    <th class="wd-10p">Title</th>
-                    <th class="wd-20p">Desciption</th>
-                    <th class="wd-20p">Image</th>
+                    <<th >SN</th>
+                    <th >Partner Name</th>
+                    <th >Image</th>
 
-                    {{--                    <th class="wd-15p">Address</th>--}}
-                    {{--                    --}}{{--                    <th class="wd-15p">Reg.no</th>--}}
-                    {{--                    <th class="wd-15p">Email</th>--}}
-                    {{--                    <th class="wd-15p">Phone</th>--}}
+                    {{--                    <th >Author</th>--}}
+                    {{--                    <th >Category</th>--}}
 
-                    {{--                    <th class="wd-15p">Due Amount</th>--}}
-                    {{--                    <th class="wd-15p">Comment</th>--}}
-                    <th class="wd-15p">Action</th>
+                    {{--                            <th >Service title</th>--}}
+                    {{--                            <th >Service image</th>--}}
+                    {{--                            <th >Service description</th>--}}
+                    {{--                            <th class="hidden-xs text-center">Team description</th>--}}
+                    {{--                            <th class="hidden-xs text-center">Team image</th>--}}
+                    <th class="text-center">Action</th>
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($award as $key =>$award )
-                    <tr id="award{{$award->id}}">
-                        <td>{{++$key}}</td>
-                        <td>{!! $award->title !!}</td>
-                        <td>{!! $award->description !!}</td>
-                        <td ><img src="{{asset(''.$award->image)}}" height="100px" width="100px"></td>
+                @foreach($partner as $key=>$partners )
 
+
+                    <tr id="about{{$partners->id}}">
+                        <td>{{++$key}}</td>
+                        <td >{{$partners->title }} </td>
+                        <td ><img src="{{asset(''.$partners->image)}}" height="100px" width="100px"></td>
+                        <td>
+{{--                            {!! $gallery->category_id !!}--}}
+                            {{-- @if(isset($gallery->category))
+                                 {{$gallery->category->title}}
+                                 --}}{{--                            {{dd($damage->gallery->name)}}--}}{{--
+                             @endif--}}
+                        </td>
+                        {{--                        <td >{{$blog->author}} </td>--}}
+                        {{--                        <td >{!! $blog->category !!} </td>--}}
                         {{--                        --}}{{--                    <td>{{$customer->companyName}}</td>--}}
                         {{--                        <td>{{$customer->address}}</td>--}}
                         {{--                        --}}{{--                    <td>{{$customer->registrationNumber}}</td>--}}
@@ -302,10 +310,10 @@
                         {{--                    <td>{{$customer->openingDue}}</td>--}}
                         {{--                    <td>{{$customer->comment}}</td>--}}
                         <td class="d-md-flex">
-                            {{--                   <div class="mg-r-20" title="View"><a href="{{route('customer.show',$customer->id)}}"><i class="icon ion-clipboard text-success"></i></a></div>--}}
-                            <div class="mg-r-20" title="Edit"><a href="{{route('award.edit',$award->id)}}"><i class="far fa-edit text-warning"></i></a></div>
-                            <div class="mg-r-20" title="Delete"><a href="{{route('award.destroy',$award->id)}}" onclick="return confirm('Are you sure you want to delete this item?');"><i class="icon ion-trash-b text-danger"></i></a></div>
-{{--                        <!-- <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-xs btn-danger remove_button" url="{{route('about.destroy',$about->id)}}"><i class="fa fa-times"></i></a> -->--}}
+                            {{--                            <div class="mg-r-20" title="View"><a href="{{route('customer.show',$customer->id)}}"><i class="icon ion-clipboard text-success"></i></a></div>--}}
+                            <div class="mg-r-20" title="Edit"><a href="{{route('partner.edit',$partners->id)}}"><i class="far fa-edit text-warning"></i></a></div>
+                            <div class="mg-r-20" title="Delete"><a href="{{route('partner.destroy',$partners->id)}}" onclick="return confirm('Are you sure you want to delete this item?');"><i class="icon ion-trash-b text-danger"></i></a></div>
+{{--                        <!-- <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-xs btn-danger remove_button" url="{{route('gallery.destroy',$partner->id)}}"><i class="fa fa-times"></i></a> -->--}}
                         </td>
                     </tr>
                     {{--                <tr>--}}
@@ -400,7 +408,7 @@
     {{--    </script>--}}
     {{--</body>--}}
     {{--</html>--}}
-    <script src="{{asset('dist/sweetalert.min.js')}}"></script>
+    {{--    <script src="{{asset('dist/sweetalert.min.js')}}"></script>--}}
     @push('scripts')
         <script type="text/javascript">
             $('.remove_button').on('click', function(e) {

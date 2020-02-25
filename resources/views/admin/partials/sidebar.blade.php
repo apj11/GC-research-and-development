@@ -60,13 +60,13 @@
 {{--              </nav>--}}
 {{--            </li>--}}
 
-{{--            <li class="nav-item">--}}
-{{--                    <a href="" class="nav-link with-sub"><i data-feather="file-text"></i>Events</a>--}}
-{{--                    <nav class="nav nav-sub">--}}
-{{--                    <a href="{{route('event.create')}}" class="nav-sub-link">New Events</a>--}}
-{{--                    <a href="{{route('event.index')}}" class="nav-sub-link">All Events</a>--}}
-{{--              </nav>--}}
-{{--            </li>--}}
+            <li class="nav-item">
+                    <a href="" class="nav-link with-sub"><i data-feather="file-text"></i>Our Partners</a>
+                    <nav class="nav nav-sub">
+                    <a href="{{route('partner.create')}}" class="nav-sub-link">New Partners</a>
+                    <a href="{{route('partner.index')}}" class="nav-sub-link">All Partners</a>
+              </nav>
+            </li>
 
             <li class="nav-item">
                 <a href="" class="nav-link with-sub"><i data-feather="layout"></i>Product Details</a>
@@ -123,8 +123,8 @@
                 <nav class="nav nav-sub">
                     {{--                    <a href="{{route('expense.create')}}" class="nav-sub-link">Expense</a>--}}
                     {{--                    <a href="{{route('income.create')}}" class="nav-sub-link">Income</a>--}}
-{{--                    <a href="{{route('sponsor.create')}}" class="nav-sub-link">New sponsor or partners</a>--}}
-{{--                    <a href="{{route('sponsor.index')}}" class="nav-sub-link">All sponsor or partners</a>--}}
+{{--                    <a href="{{route('sponsor.create')}}" class="nav-sub-link">New sponsor or partner</a>--}}
+{{--                    <a href="{{route('sponsor.index')}}" class="nav-sub-link">All sponsor or partner</a>--}}
                     {{--                    <a   href="#" class="nav-sub-link">Account Head</a>--}}
                 </nav>
             </li> -->

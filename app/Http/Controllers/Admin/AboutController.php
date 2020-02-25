@@ -62,7 +62,7 @@ class AboutController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**

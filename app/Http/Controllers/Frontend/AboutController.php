@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 use App\Award;
 use App\About;
+use App\Blog;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -17,12 +18,13 @@ class AboutController extends Controller
     {
         $award=Award::all();
         $about=About::all();
-
+        $blog=Blog::latest()->paginate(2);
         $menu = 'aboutus_index';
         return  view('frontend.about')
             ->with('about',$about)
             ->with('awards',$award)
-            ->with('menu',$menu);
+            ->with('menu',$menu)
+            ->with('blog',$blog);
     }
 
     /**
@@ -56,11 +58,13 @@ class AboutController extends Controller
     {
         $award = Award::findOrFail($id);
         $about=About::all();
+        $blog=Blog::all();
         $menu = 'aboutus_show';
 //        dd($award);
         return view('frontend.about', $award)->with('award',$award)
             ->with('about',$about)
-            ->with('menu',$menu);
+            ->with('menu',$menu)
+            ->with('blog',$blog);
     }
 
     /**

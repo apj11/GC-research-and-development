@@ -5,6 +5,7 @@ namespace App\Http\Controllers\frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Contact;
+use App\Blog;
 
 class ContactController extends Controller
 {
@@ -15,8 +16,10 @@ class ContactController extends Controller
      */
     public function index()
     {
+        $blog=Blog::latest()->paginate(2);
         $contact=Contact::all();
-        return view('frontend.contact')->with('contact',$contact);
+        return view('frontend.contact')->with('contact',$contact)
+            ->with('blog',$blog);
     }
 
     /**

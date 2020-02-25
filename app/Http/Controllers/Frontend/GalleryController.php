@@ -1,9 +1,11 @@
 <?php
 
 namespace App\Http\Controllers\Frontend;
+use App\Category;
 use App\Gallery;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Blog;
 
 class GalleryController extends Controller
 {
@@ -14,10 +16,15 @@ class GalleryController extends Controller
      */
     public function index()
     {
+        $categories=Category::all();
+        $blog=Blog::latest()->paginate(2);
         $gallery=Gallery::paginate(8);
         return view('frontend.gallery')
             ->with('gallery',$gallery)
-            ;
+            ->with('categories',$categories)
+
+            ->with('blog',$blog);
+
     }
 
     /**
@@ -49,7 +56,9 @@ class GalleryController extends Controller
      */
     public function show($id)
     {
-        //
+//        $gallery= Gallery::all();
+//        return  view('frontend.gallery')
+//            ->with('gallery',$gallery);
     }
 
     /**
