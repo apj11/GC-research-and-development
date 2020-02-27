@@ -5,16 +5,19 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>GC</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Rajdhani&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-	integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
-	<link href="css/animate.min.css" rel="stylesheet">
-	<link href="css/hover.css" type="text/css" rel="stylesheet"/>
-	<link href="css/style.css" rel="stylesheet" type="text/css"/>
+
+    <link rel="stylesheet" href="{{asset('https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css')}}" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="{{asset('css/font-awesome.min.css')}}" rel="stylesheet" type="text/css"/>
+    <link href="{{asset('https://fonts.googleapis.com/css?family=Open+Sans|Rajdhani&display=swap')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('https://pro.fontawesome.com/releases/v5.10.0/css/all.css')}}"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{asset('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css')}}">
+    <link href="{{asset('css/hover.css')}}" type="text/css" rel="stylesheet"/>
+    <link href="{{asset('css/style.css')}}" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="{{asset('dist/css/lightbox.min.css')}}">
+    <link href="{{asset('css/plugins/toastr/toastr.min.css')}}" rel="stylesheet">
+    @stack('styles');
 </head>
 <body>
 	<section class="slider_main">
@@ -86,9 +89,17 @@
 						</li>
 					</ul>
 				</div>
-				<div class="login_top">
-					<a href="#" class="btn_default">Login/Register</a>
-				</div><!-- login_top -->
+
+
+
+                <div class="login_top">
+                    <a href="#" class="btn_default" data-toggle="modal" data-target="#exampleModalCenter">Login/Register</a>
+
+
+
+                </div>
+
+                <!-- login_top -->
 			</nav>
 		</div><!-- top_navigation -->
 	</section><!-- slider_main -->
@@ -438,11 +449,402 @@
 		</div><!-- container -->
 	</section>
 
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
-	<script src="js/wow.min.js"></script>
-	<script src="js/script.js"></script>
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered top_login" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <ul class="nav nav-tabs justify-content-center pt-4" id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active text-primary" id="pills-login-tab" data-toggle="pill" href="#pills-login" role="tab" aria-controls="pills-login"
+                               aria-selected="true">LOGIN</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-primary" id="pills-register-tab" data-toggle="pill" href="#pills-register" role="tab" aria-controls="pills-register"
+                               aria-selected="false">REGISTER</a>
+                        </li>
+                    </ul>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="card mx-auto border-0">
+
+
+                            <div class="card-body pb-4">
+                                <div class="tab-content" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="pills-login-tab">
+                                        <form method="get" action="">
+                                            @csrf
+                                            <div class="form-group">
+                                                <input type="email" name="email" class="form-control" id="email" placeholder=" Email" required autofocus>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <input type="password" name="password" class="form-control" id="password" id="password" placeholder="Password" required>
+                                            </div>
+
+                                            <div class="text-center">
+                                                <button type="submit" class="btn btn-primary out-width_des">LOGIN
+                                                    <div class="des_aft_bef"></div>
+                                                </button>
+
+                                            </div>
+
+                                            <div class="bottom_form pt-4">
+                                                <a href="#" class="red_color">Forgot Your Password?</a>
+                                                <!-- <a class="nav-link" id="pills-register-tab" data-toggle="pill" href="#pills-register" role="tab" aria-controls="pills-register"
+                                                  aria-selected="false">Register Here !</a> -->
+
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="pills-register-tab">
+                                        <form method="post" action="{{route('registers.store')}}">
+                                            @csrf
+                                            <div class="form-group">
+                                                <input type="text" name="username" id="username" class="form-control {{ $errors->has('username' ? 'has-error' :  '') }}" placeholder="Full Name" autofocus>
+                                                @if($errors->has('username'))
+                                                    <p style="color: red">{{$errors->first('username')}}</p>
+                                                    @endif
+                                            </div>
+
+                                            <div class="form-group">
+                                                <input type="email" name="email" id="email" class="form-control{{ $errors->has('email' ? 'has-error' :  '') }}" placeholder="Email">
+                                                @if($errors->has('email'))
+                                                   <p style="color: red"> {{$errors->first('email')}}</p>
+                                                    @endif
+
+
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" name="number" id="number" class="form-control {{ $errors->has('number' ? 'has-error' :  '') }}" placeholder="Contact Number">
+                                                @if($errors->has('number'))
+                                                    <p style="color: red"> {{$errors->first('number')}}</p>
+                                                @endif
+                                            </div>
+
+                                            <div class="form-group">
+                                                <input type="password" name="password" id="password" class="form-control{{$errors->has('password'?'has-error':'')}}" placeholder="Set a password">
+                                                @if($errors->has('password'))
+                                                    <p style="color: red"> {{$errors->first('password')}}</p>
+                                                @endif
+                                            </div>
+
+                                            <div class="form-group">
+                                                <input type="password" name="password_confirmation" id="password-confirm" class="form-control{{$errors->has('password_confirmation'?'has-error':'')}}" placeholder="Retype Password">
+                                                @if($errors->has('password_confirmation'))
+                                                    <p style="color: red"> {{$errors->first('password_confirmation')}}</p>
+                                                @endif
+                                            </div>
+                                            <div class="form-group form-check pt-3">
+                                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                                <label class="form-check-label" for="exampleCheck1">I accept all the terms and conditions</label>
+                                            </div>
+
+                                            <div class="text-center">
+                                                <button type="submit" class="btn btn-primary out-width_des">REGISTER
+                                                    <div class="des_aft_bef"></div>
+                                                </button>
+
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    @include('flash-message')
+    <script src="{{asset('dist/js/lightbox-plus-jquery.min.js')}}"></script>
+    <script src="{{asset('js/plugins/toastr/toastr.min.js')}}"></script>
+    <script src="{{asset('dist/js/lightbox.js')}}"></script>
+    <script src="{{asset('https://code.jquery.com/jquery-3.4.1.slim.min.js')}}" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="{{asset('https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js')}}" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="{{asset('https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js')}}" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="{{asset('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js')}}"></script>
+    <script src="{{asset('js/script.js')}}"></script>
+
+    <script>
+        $(function(){
+            'use strict'
+
+            $('#example1').DataTable({
+                language: {
+                    searchPlaceholder: 'Search...',
+                    sSearch: '',
+                    lengthMenu: '_MENU_ items/page',
+                }
+            });
+
+            $('#example2').DataTable({
+                responsive: true,
+                language: {
+                    searchPlaceholder: 'Search...',
+                    sSearch: '',
+                    lengthMenu: '_MENU_ items/page',
+                }
+            });
+
+            $('#example8').DataTable({
+                responsive: true,
+                language: {
+                    searchPlaceholder: 'Search...',
+                    sSearch: '',
+                    lengthMenu: '_MENU_ items/page',
+                }
+            });
+
+
+
+            // Select2
+            $('.dataTables_length select').select2({ minimumResultsForSearch: Infinity });
+
+        });
+    </script>
+
+
+    <script>
+        $(function(){
+
+            'use strict'
+
+            $.plot('#flotChart1', [{
+                data: df1,
+                color: '#38c4fa'
+            }], {
+                series: {
+                    shadowSize: 0,
+                    lines: {
+                        show: true,
+                        lineWidth: 1.5,
+                        fill: true,
+                        fillColor: { colors: [ { opacity: 0 }, { opacity: 0.5 } ] }
+                    },
+                    points: {
+                        show: false,
+                        radius: 2,
+                        lineWidth: 1.5
+                    }
+                },
+                grid: {
+                    borderWidth: 0,
+                    labelMargin: 0,
+                },
+                yaxis: { show: false },
+                xaxis: {
+                    show: false,
+                    min: 40,
+                    max: 80
+                }
+            });
+
+            $.plot('#flotChart2', [{
+                data: df1,
+                color: '#22d273'
+            }], {
+                series: {
+                    shadowSize: 0,
+                    lines: {
+                        show: true,
+                        lineWidth: 1.5,
+                        fill: true,
+                        fillColor: { colors: [ { opacity: 0 }, { opacity: 0.5 } ] }
+                    },
+                    points: {
+                        show: false,
+                        radius: 2,
+                        lineWidth: 1.5
+                    }
+                },
+                grid: {
+                    borderWidth: 0,
+                    labelMargin: 0,
+                },
+                yaxis: { show: false },
+                xaxis: {
+                    show: false,
+                    min: 20,
+                    max: 60
+                }
+            });
+
+            $.plot('#flotChart3', [{
+                data: df1,
+                color: '#e83e8c'
+            }], {
+                series: {
+                    shadowSize: 0,
+                    lines: {
+                        show: true,
+                        lineWidth: 1.5,
+                        fill: true,
+                        fillColor: { colors: [ { opacity: 0 }, { opacity: 0.5 } ] }
+                    },
+                    points: {
+                        show: false,
+                        radius: 2,
+                        lineWidth: 1.5
+                    }
+                },
+                grid: {
+                    borderWidth: 0,
+                    labelMargin: 0,
+                },
+                yaxis: { show: false },
+                xaxis: {
+                    show: false,
+                    min: 60,
+                    max: 100
+                }
+            });
+
+            $.plot('#flotChart4', [{
+                data: df1,
+                color: '#fd7e14'
+            }], {
+                series: {
+                    shadowSize: 0,
+                    lines: {
+                        show: true,
+                        lineWidth: 1.5,
+                        fill: true,
+                        fillColor: { colors: [ { opacity: 0 }, { opacity: 0.5 } ] }
+                    },
+                    points: {
+                        show: false,
+                        radius: 2,
+                        lineWidth: 1.5
+                    }
+                },
+                grid: {
+                    borderWidth: 0,
+                    labelMargin: 0,
+                },
+                yaxis: { show: false },
+                xaxis: {
+                    show: false,
+                    min: 100,
+                    max: 140
+                }
+            });
+
+            // card-calendar-one widget
+            $('#datepicker1').datepicker({
+                showOtherMonths: true
+            });
+
+        })
+    </script>
+
+    <script>
+        $(function(){
+
+            'use strict'
+
+            var getUrlParameter = function getUrlParameter(sParam) {
+                var sPageURL = window.location.search.substring(1),
+                    sURLVariables = sPageURL.split('&'),
+                    sParameterName,
+                    i;
+
+                for (i = 0; i < sURLVariables.length; i++) {
+                    sParameterName = sURLVariables[i].split('=');
+
+                    if (sParameterName[0] === sParam) {
+                        return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+                    }
+                }
+            };
+
+            if(!Cookies.get('theme-skin')){
+                $('#defaultTheme').addClass('theme-selected');
+            }
+
+            $('.card-theme').on('click', function(e){
+                $('.card-theme').removeClass('theme-selected');
+                $(this).addClass('theme-selected');
+
+                var skin = $(this).attr('data-title');
+
+                if(skin === 'default') {
+                    $('#themeSkin').remove();
+                    Cookies.remove('theme-skin');
+                } else {
+
+                    if($('#themeSkin').length === 0) {
+                        $('head').append('<link id="themeSkin" rel="stylesheet" href="{{asset('assets/css/skin')}}.'+skin+'.css">')
+                    } else {
+                        $('#themeSkin').attr('href', '{{asset('assets/css/skin')}}.'+skin+'.css');
+                    }
+
+                    Cookies.set('theme-skin', skin);
+                }
+            })
+
+            var skinParam = getUrlParameter('skin');
+            if(skinParam.length) {
+                $('.card-theme').removeClass('theme-selected');
+                $('.card-theme[data-title="'+skinParam+'"]').addClass('theme-selected');
+
+                if(skinParam === 'default') {
+                    $('#themeSkin').remove();
+                    Cookies.remove('theme-skin');
+                } else {
+
+                    if($('#themeSkin').length === 0) {
+                        $('head').append('<link id="themeSkin" rel="stylesheet" href="{{asset('assets/css/skin')}}.'+skinParam+'.css">')
+                    } else {
+                        $('#themeSkin').attr('href', '{{asset('assets/css/skin')}}.'+skinParam+'.css');
+                    }
+
+                    Cookies.set('theme-skin', skinParam);
+                }
+            }
+
+        })
+    </script>
+    {{--<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>--}}
+    <script type="text/javascript" src="https://unpkg.com/nepali-date-picker@2.0.0/dist/jquery.nepaliDatePicker.min.js" integrity="sha384-bBN6UZ/L0DswJczUYcUXb9lwIfAnJSGWjU3S0W5+IlyrjK0geKO+7chJ7RlOtrrF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/nepali-date-picker@2.0.0/dist/nepaliDatePicker.min.css" integrity="sha384-Fligaq3qH5qXDi+gnnhQctSqfMKJvH4U8DTA+XGemB/vv9AUHCwmlVR/B3Z4nE+q" crossorigin="anonymous">
+
+    <script type="text/javascript">
+        $(".bod-picker").nepaliDatePicker({
+            // dateFormat: "%D, %M %d, %y",
+
+            dateFormat: "%y-%m-%d",
+            closeOnDateSelect: true
+        });
+        $("#clear-bth").on("click", function(event) {
+            $(".bod-picker").val('');
+        });
+
+    </script>
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+    @stack('scripts')
 </body>
 </html>

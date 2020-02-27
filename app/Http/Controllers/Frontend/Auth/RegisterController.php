@@ -1,8 +1,14 @@
 <?php
 
 namespace App\Http\Controllers\Frontend\Auth;
-
+use App\Award;
+use App\Blog;
+use App\Gallery;
+use App\Partner;
+use App\Productdetails;
+use App\Register;
 use App\Http\Controllers\Controller;
+use App\Testimonial;
 use Illuminate\Http\Request;
 
 class RegisterController extends Controller
@@ -14,7 +20,19 @@ class RegisterController extends Controller
      */
     public function index()
     {
-        //
+        $award=Award::latest()->paginate(3);
+        $productdetails=Productdetails::latest()->paginate(3);
+        $blog=Blog::latest()->paginate(2);
+        $testimonial=Testimonial::all();
+        $gallery=Gallery::all();
+        $partner=Partner::all();
+        return view ('frontend.index')
+            ->with('testimonial',$testimonial)
+            ->with('blog',$blog)
+            ->with('award',$award)
+            ->with('gallery',$gallery)
+            ->with('productdetails',$productdetails)
+            ->with('partner',$partner);
     }
 
     /**
@@ -24,7 +42,7 @@ class RegisterController extends Controller
      */
     public function create()
     {
-        //
+        return view('frontend.index');
     }
 
     /**
@@ -35,7 +53,23 @@ class RegisterController extends Controller
      */
     public function store(Request $request)
     {
-        //
+//        dd($request->all());
+
+        $this->validate($request,[
+            'username'=>'required',
+            'email'=>'required | email | unique:registers',
+            'number'=>'required|min:8|max:10',
+            'password'=>'required| confirmed |min:6',
+            'password_confirmation'=>'required|min:6 |same:password',
+            ]);
+        $register =new Register();
+        $register->username=$request->username;
+        $register->email=$request->email;
+        $register->number=$request->number;
+        $register->password=$request->password;
+        $register->save();
+        return back()->with('success','successfully Registered');
+
     }
 
     /**

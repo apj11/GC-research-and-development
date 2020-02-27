@@ -18,7 +18,6 @@
     <!-- vendor css -->
     <link href="../lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
     <link href="../lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-
     <!-- template css -->
     <link rel="stylesheet" href="../assets/css/cassie.css">
 

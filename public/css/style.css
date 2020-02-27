@@ -196,12 +196,121 @@ background: white;
 
 
 
+/*..........top-login..............*/
+.top_login .nav-tabs{
+	width: 100%;
+}
 
+.top_login .modal-header{
+	background-color: black;
+}
 
+.top_login .nav-link{
+background-color: black;
+    color: white !important;
+    font-size: 20px;
+    font-weight: bold;
+}
+.top_login .nav-item .active{
+	background-color: black !important;
+	color: white !important;
+}
+.top_login .nav-link:hover{
+	color: #96ff06 !important;
+}
+.top_login .nav-tabs{
+	border-bottom: 0;
+	padding-top: 0 !important;
+}
 
+.top_login .tab-pane .form-group input{
+	    border: none;
+    border-bottom: 1px solid;
+    border-radius: 0;
+}
 
+.top_login .out-width_des{
+	    width: 100%;
+    position: relative;
+    padding: 20px 0px !important;
+    background-color: black;
+    border-radius: 0;
+    color: white !important;
+    font-size: 20px;
+    border: none !important;
+}
 
+.top_login .out-width_des:before{
+    position: absolute;
+    content: "";
+    width: 22%;
+    height: 70px;
+    background-color: black;
+    left: -22%;
+    top: 0%;
+}
+.top_login .out-width_des:after{
+    position: absolute;
+    content: "";
+    width: 22%;
+    height: 70px;
+    background-color: black;
+    right: -22%;
+    top: 0%;
+}
 
+.modal-backdrop{
+	background-color: #182f1d;
+}
+
+.top_login .bottom_form{
+	    display: flex;
+    justify-content: space-between;
+}
+.top_login .close{
+	color: white;
+}
+.des_aft_bef:before{
+	position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 36px solid transparent;
+    border-right: 0px solid transparent;
+    border-top: 30px solid #383936;
+    left: -22%;
+    bottom: -43%;
+}
+.des_aft_bef:after{
+	position: absolute;
+    content: "";
+     right: -22%;
+    bottom: -43%;
+    width: 0;
+    height: 0;
+    border-left: 0px solid transparent;
+    border-right: 36px solid transparent;
+    border-top: 30px solid #383936;
+}
+.red_color{
+	color: red;
+	font-weight: bold;
+	font-size: 14px;
+}
+.top_login  .form-check{
+	margin-bottom: 0;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.top_login  .form-control{
+	font-size: 14px;
+	font-weight: bold;
+}
+.card-body .btn:hover{
+	background-color: black !important;
+}
 /*..............top-navigation.................*/
 
 .top_navigation .navbar-brand{
@@ -306,6 +415,7 @@ background: white;
 	}
 
 
+
 	/*..............award section.......*/
 
 
@@ -368,7 +478,7 @@ background: white;
 
 	.services .service_blk i{
 		font-size: 120px;
-	}
+	} 
 	.service_blk{
 		background-color: white;
 		padding-top: 20%;
@@ -1133,7 +1243,7 @@ color: white;
 	/*......................gallery page......................*/
 
 	.inner_slider_banner {
-		background-image:
+		background-image: 
 	}
 
 	.gallery_tab{
@@ -1210,14 +1320,14 @@ color: white;
     font-weight: bold;
     font-size: 14px;
     transition: 1s all;
-    text-align: center;
+    text-align: center;	
 }
 
 .inner_contact_btn a:hover{
 	background-color: black;
 	color: white;
 	transition: 1s all;
-}
+}	
 .inner_slider_banner{
 	      background-image: url(../images/restaurant.png);
     background-repeat: no-repeat;
@@ -1304,7 +1414,7 @@ color: white;
 		    font-size: 1rem;
 		    color: #9b9b9b;
 
-	}
+	}  
 	.card-body .btn{
 		       color: #212529;
     font-weight: bold;
@@ -1371,7 +1481,7 @@ color: white;
 		}
 			.inner_news_head h3{
 				font-size: 20px;
-    font-weight: 600;
+    font-weight: 600;	
     margin-bottom: 0;
 			}
 			.inner_news_head{
@@ -1442,7 +1552,7 @@ color: white;
  	.about_section{
  		padding-top: 4%;
  	}
- 	.about_section .nav-tabs{
+ 	.about_section .nav-tabs{	
  		display: inherit;
  	}
  	.about_section .nav-tabs i{
@@ -1471,7 +1581,7 @@ color: white;
  	}
  	.about_section .nav-tabs .active i{
  			color: black;
-
+ 			
  	}
  	.about_section .nav-tabs .nav-item{
  		margin-left: 0;
@@ -1510,7 +1620,7 @@ color: white;
     border: 1px solid #9b9b9b;
                padding: 30px 40px;
  	}
-
+  
  	.overview_image img{
  		  height: 40px;
     width: 40px;
@@ -1568,7 +1678,7 @@ color: white;
 
  .service_card_main h4{
  	font-weight: bold;
- }
+ }	   
 
  .service_card_main span{
  	display: block;
@@ -1770,4 +1880,110 @@ position: absolute;
 
 .map_location{
 	margin-top: 30%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.............media query............*/
+@media all and (max-width: 767px) {
+	.carousel-item{
+		display: none !important;
+	}
+	.carousel-indicators{
+		display: none !important;
+	}
+	.top_navigation{
+		position: inherit;
+		text-align: center;
+	}
+	.navbar{
+		display: inherit;
+	}
+	.top_navigation .btn_default{
+		    font-size: 12px;
+    position: absolute;
+    top: 26px;
+    right: 2%;
+	}
+	.top_navigation .navbar-toggler{
+		    margin-top: 5%;
+    margin-bottom: 4%;
+	}
+	.top_navigation .navbar-brand {
+		position: absolute;
+		left: 2%;
+	}
+	.gallery_grid_more img{
+		height: auto;
+	}
+	.news_update .news_more{
+		margin-top: 5%;
+	}
+	.footer-link{
+		    margin-top: 6%;
+	}
+	.footer-link .link li{
+		margin-top: 2%;
+	}
+	.footer-news{
+		margin-top: 6%;
+	}
+	.top_head .top_logo img{
+		width: 100%;
+	}
+	.head_identity{
+		text-align: left;
+	}
+	.top_navigation2{
+		    margin-top: 10%;
+		    text-align: left;
+	}
+	.inner_slider_banner{
+		background-image: none;
+		padding: inherit;
+	}
+	.inner_slider_banner .inner_breadcumbs h2{
+		left: 4%;
+		    margin-bottom: 4%;
+	}
+	.top_navigation2 .btn_default{
+		    top: 30px;
+		    right: 0;
+	}
+	.top_navigation2 .navbar-toggler{
+		background-color: white;
+	}
+	.top_navigation2 .navbar-nav{
+		width: 100%;
+		}
+		.top_navigation2 .navbar-nav li{
+			margin-left: 0;
+		}
+		.inner_slider_banner .inner_breadcumbs h2{
+			display: none;
+		}
+
+}
+@media all and (max-width: 320px) {
+	.top_navigation .navbar-toggler{
+		border: none;
+	}
 }

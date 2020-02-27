@@ -18,6 +18,7 @@
 
 
 Route::resource('/','Frontend\IndexController');
+Route::resource('registers','Frontend\Auth\RegisterController');
 Route::resource('abouts','Frontend\AboutController');
 Route::resource('events','Frontend\EventController');
 Route::resource('galleries','Frontend\GalleryController');

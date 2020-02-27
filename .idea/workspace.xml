@@ -3,34 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="be91e3db-3435-40e6-b51b-5a88449bbc37" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Frontend/BlogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/BlogController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Frontend/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/ContactController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/about/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/about/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/award/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/award/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/blog/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/blog/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/category/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/contact/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/contact/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/download/create.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/download/edit.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/download/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/event/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/event/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/gallery/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/gallery/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/galleryoriginal/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/galleryoriginal/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/notice/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/notice/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/partials/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/partials/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/partner/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/partner/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/partner/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/partner/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/service/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/service/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/slider/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/slider/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/social/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/social/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/sponsor/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/sponsor/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Frontend/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/auth/login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/blog.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/blog.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/blogdetails.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/blogdetails.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/gallery.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/gallery.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -181,7 +158,7 @@
       <workItem from="1582710719628" duration="16000" />
       <workItem from="1582711629562" duration="329000" />
       <workItem from="1582719053265" duration="751000" />
-      <workItem from="1582776409831" duration="6675000" />
+      <workItem from="1582776409831" duration="23041000" />
     </task>
     <servers />
   </component>
@@ -189,10 +166,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="413" y="125" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582626442087">
+    <state x="365" y="0" key="#PHP" timestamp="1582785049971">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="413" y="125" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1582626442087" />
+    <state x="365" y="0" key="#PHP/0.0.1366.738@0.0.1366.738" timestamp="1582785049971" />
+    <state x="413" y="125" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582797712540">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="413" y="125" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1582797712540" />
     <state x="517" y="293" key="NewPhpFileDialog" timestamp="1582519241231">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -205,10 +186,14 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="379" y="194" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1582776421887" />
-    <state x="339" y="165" key="run.anything.popup" timestamp="1582700482908">
+    <state x="475" y="286" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582785080379">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="339" y="165" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1582700482908" />
+    <state x="475" y="286" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.738@0.0.1366.738" timestamp="1582785080379" />
+    <state x="339" y="165" key="run.anything.popup" timestamp="1582803332476">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="339" y="165" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1582803332476" />
     <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1582181441791">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
