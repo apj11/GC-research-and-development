@@ -8,7 +8,7 @@
             <div class="block">
                 <!-- General Data Title -->
                 <div class="block-title">
-                    <h2><i class="fa fa-pencil"></i> <strong>Create</strong> Service</h2>
+                    <h2><i class="fa fa-pencil"></i> <strong>Update</strong> Service</h2>
                 </div>
                 <!-- END General Data Title -->
 

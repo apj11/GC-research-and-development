@@ -15,7 +15,7 @@
             </div><!-- col -->
             <div class="col-md-3">
                 <div class="head_identity">
-                    <a href="#">     <i class="fas fa-globe"></i> <span>softechpark.com</span></a>
+                    <a href="https://softechpark.com/">     <i class="fas fa-globe"></i> <span>softechpark.com</span></a>
                 </div><!-- head_identity -->
             </div><!-- col -->
             <div class="col-md-3">

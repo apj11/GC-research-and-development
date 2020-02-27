@@ -60,7 +60,7 @@
 		<div class="overlay"></div><!-- overlay -->
 		<div class="top_navigation ">
 			<nav class="navbar navbar-expand-lg navbar-light">
-				<a class="navbar-brand" href="#"><img src="images//logo/gc_home.png"></a>
+				<a class="navbar-brand" href="{{route('index')}}"><img src="images//logo/gc_home.png"></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
@@ -94,7 +94,7 @@
 	</section><!-- slider_main -->
 	<section class="award">
 		<div class="row no-pad">
-            @foreach($award as $awards)
+			@foreach($award as $awards)
 			<div class="col-md-4">
 				<div class="award_blk">
 					<div class="image_blk">
@@ -110,7 +110,7 @@
 				</div><!-- award_blk -->
 
 			</div><!-- col -->
-            @endforeach
+			@endforeach
 		</div><!-- row -->
 	</section><!-- award -->
 
@@ -169,7 +169,7 @@
 			<div class="row">
 				<div class="offset-2 col-md-8">
 					<div class="row">
-                        @foreach($productdetails as $productdetail)
+						@foreach($productdetails as $productdetail)
 						<div class="col-md-4">
 							<div class="product_blk_head">
 								<div class="product_blk">
@@ -194,7 +194,7 @@
 
 							</div><!-- product_blk_head -->
 						</div><!-- col -->
-                            @endforeach
+						@endforeach
 					</div><!-- row -->
 				</div><!-- col -->
 			</div><!-- row -->
@@ -208,8 +208,8 @@
 			</div><!-- product_head -->
 			<div class="gallery_content">
 				<div class="row">
-                    @foreach($gallery as $key=>$gal)
-                        @if($key == 0)
+					@foreach($gallery as $key=>$gal)
+					@if($key == 0)
 					<div class="col-md-6 no-pad">
 						<div class="gallery_grid padding_right02p">
 							<img src="{{asset(''.$gal->image)}}" width="580" height="400">
@@ -218,34 +218,28 @@
 							</div><!-- all_gallery_link -->
 						</div><!-- gallery_grid -->
 					</div><!-- col -->
-                        @endif
-                            @if($key> 0)
-					<div class="col-md-3 no-pad">
-                        @if($key == 1)
-						<div class="gallery_grid_more padding_top1p padding_right02p">
-							<img src="{{asset(''.$gal->image)}}" width="200" height="200">
-							<div class="gallery_overlay">
-								<a href="{{route('galleries.index')}}"><i class="fas fa-arrow-right"></i></a>
-							</div><!-- gallery_overlay -->
-						</div><!-- gallery_grid_more -->
-                        @endif
+					@endif
+					@endforeach
 
-                        @if($key == 2)
 
-                        <div class="gallery_grid_more">
-                            <img src="{{asset(''.$gal->image)}}" width="200" height="200">
-                            <div class="gallery_overlay">
-                                <a href="{{route('galleries.index')}}"><i class="fas fa-arrow-right"></i></a>
-                            </div><!-- gallery_overlay -->
-                            <div class="gallery_overlay">
-                                <a href="{{route('galleries.index')}}"><i class="fas fa-arrow-right"></i></a>
-                            </div><!-- gallery_overlay -->
-                        </div><!-- gallery_grid_more -->
-                            @endif
 
-					</div><!-- col -->
-                            @endif
-                        @endforeach
+					<div class="col-md-6">
+						<div class="row">
+							@foreach($gallery as $key=>$gal)
+							@if($key>0 && $key<5)
+							<div class="col-md-6 no-pad">
+								<div class="gallery_grid_more padding_right02p">
+									<img src="{{asset(''.$gal->image)}}" width="200" height="200">
+									<div class="gallery_overlay">
+										<a href="{{route('galleries.index')}}"><i class="fas fa-arrow-right"></i></a>
+									</div><!-- gallery_overlay -->
+								</div>
+							</div>
+							@endif
+							@endforeach
+
+						</div>
+					</div>
 
 				</div><!-- row -->
 			</div><!-- gallery_content -->
@@ -270,7 +264,7 @@
 								<div class="heading_line"><span></span></div>
 								<p>If you need any industrial solution we are available for you. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 							</div>
-							<a href="#">Contact Us<i class="icofont-long-arrow-right"></i></a>
+							<a href="{{route('contacts.index')}}">Contact Us<i class="icofont-long-arrow-right"></i></a>
 						</div>
 					</div>
 				</div>
@@ -280,7 +274,7 @@
 							<div class="background_layer"></div>
 							<div class="layer_content">
 								<div class="testimonial_owlCarousel owl-carousel">
-                                    @foreach($testimonial as $testimonials)
+									@foreach($testimonial as $testimonials)
 									<div class="testimonials">
 										<div class="testimonial_content">
 											<div class="testimonial_caption">
@@ -296,7 +290,7 @@
 										</div>
 									</div>
 
-                                    @endforeach
+									@endforeach
 								</div>
 							</div>
 						</div>
@@ -312,7 +306,7 @@
 				<h2>UPDATE NEWS</h2>
 				<P>Don't find customers for your products for your customers </P>
 			</div><!-- product_head -->
-            @foreach($blog as $blogs)
+			@foreach($blog as $blogs)
 			<div class="row">
 				<div class="col-md-4">
 					<div class="news_image">
@@ -333,7 +327,7 @@
 				</div><!-- co -->
 			</div><!-- row -->
 			<hr>
-            @endforeach
+			@endforeach
 		</div><!-- container -->
 	</section><!-- news_update -->
 
@@ -347,13 +341,11 @@
 					<div class="col">
 						<div class="brands_slider_container">
 							<div class="owl-carousel owl-theme brands_slider">
-                                @foreach($partner as $partners)
+								@foreach($partner as $partners)
 								<div class="owl-item">
 									<div class="brands_item d-flex flex-column justify-content-center"><img src="{{asset(''.$partners->image)}}" alt=""></div>
 								</div>
 								@endforeach
-
-
 							</div> <!-- Brands Slider Navigation -->
 							<div class="brands_nav brands_prev"><i class="fas fa-chevron-left"></i></div>
 							<div class="brands_nav brands_next"><i class="fas fa-chevron-right"></i></div>
@@ -412,11 +404,11 @@
 							<div class="footer-title">
 								<h4 class="title">LATEST NEWS</h4>
 							</div>
-                            @foreach($blog as $blogs)
+							@foreach($blog as $blogs)
 							<ul class="news">
 								<li><img src="{{asset(''.$blogs->image)}}"><p><a href="{{route('blogdetails.show', $blogs->id)}}"> {{$blogs->title}}</a><span>{{$blogs->date}}</span></p></li>
 							</ul>
-                                @endforeach
+							@endforeach
 						</div> <!-- footer contact -->
 					</div>
 				</div> <!-- row -->
@@ -426,7 +418,7 @@
 				<div class="row">
 					<div class="col-md-6">
 						<div class="design_boss">
-							<small>Design by <a href="#">softechpark.</a> All Rights Reserved</small>
+							<small>Design by <a href="https://softechpark.com/">softechpark.</a> All Rights Reserved</small>
 						</div><!-- design_boss -->
 					</div><!-- col -->
 					<div class="offset-md-3 col-md-3">
@@ -437,7 +429,7 @@
 								<li class="icon_bg1"><a href=""><i class="fab fa-instagram" aria-hidden="true"></i></a>
 								</li>
 								<li class="icon_bg2"><a href="https://www.youtube.com/channel/UCsxhtxRoxBaD9-oemjvZq4A"><i class="fab fa-youtube" aria-hidden="true"></i></a> </li>
-								<li class="icon_bg1"><a href="#"><i class="fab fa-google-plus-g" aria-hidden="true"></i></a></li>
+								<li class="icon_bg1"><a href="www.google.com"><i class="fab fa-google-plus-g" aria-hidden="true"></i></a></li>
 							</ul>
 						</div><!-- footer_end_social -->
 					</div><!-- col -->
@@ -450,7 +442,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
-		<script src="js/wow.min.js"></script>
+	<script src="js/wow.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>

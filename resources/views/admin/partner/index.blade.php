@@ -248,8 +248,8 @@
         <div>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">gallery</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">All gallery</li>
+                    <li class="breadcrumb-item"><a href="#">Partners</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">All Partners</li>
                 </ol>
             </nav>
 
@@ -260,7 +260,7 @@
     </div><!-- content-header -->
     <div class="content-body content-body-calendar" style="margin-top: -50px;">
         <div class="d-md-flex justify-content-between">
-            <h4 class="content-title mg-t-10">Welcome to gallery</h4>
+            <h4 class="content-title mg-t-10">Welcome to our partners</h4>
             <a href="{{route('partner.create')}}" class="btn btn-sm btn-primary"> Add new Partners</a>
             {{--            <button type="button" class="btn btn-sm btn-primary">Add  New Customer</button>--}}
         </div>
@@ -269,9 +269,9 @@
             <table id="example1" class="table">
                 <thead>
                 <tr>
-                    <<th >SN</th>
-                    <th >Partner Name</th>
-                    <th >Image</th>
+                    <th>SN</th>
+                    <th>Partner Name</th>
+                    <th>Partner Logo</th>
 
                     {{--                    <th >Author</th>--}}
                     {{--                    <th >Category</th>--}}

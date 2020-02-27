@@ -85,15 +85,15 @@
               </nav>
             </li>--}}
 
-             <li class="nav-item">
-                <a href="" class="nav-link with-sub"><i data-feather="x-circle"></i>Services</a>
-                <nav class="nav nav-sub">
-                    <a href="{{route('service.create')}}" class="nav-sub-link">New services</a>
-                    <a href="{{route('service.index')}}" class="nav-sub-link">All Services</a>
+{{--             <li class="nav-item">--}}
+{{--                <a href="" class="nav-link with-sub"><i data-feather="x-circle"></i>Services</a>--}}
+{{--                <nav class="nav nav-sub">--}}
+{{--                    <a href="{{route('service.create')}}" class="nav-sub-link">New services</a>--}}
+{{--                    <a href="{{route('service.index')}}" class="nav-sub-link">All Services</a>--}}
 {{--                    <a href="#" class="nav-sub-link">Damage Product</a>--}}
 {{--                    <a href="#" class="nav-sub-link">Catagories</a>--}}
-                </nav>
-            </li>
+{{--                </nav>--}}
+{{--            </li>--}}
 {{--            <li class="nav-item">--}}
 {{--                <a href="#" class="nav-link"><i data-feather="layers"></i> Stock</a>--}}
 {{--            </li>--}}

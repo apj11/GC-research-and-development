@@ -36,9 +36,11 @@
                                 </a>
 							</div><!-- gallery_overlay -->
 						</div><!-- gallery_grid_more -->
-        </div>
+          </div>
         @endforeach
-  	</div><!-- row -->
+
+  	</div>
+  {{$gallery ->links()}}<!-- row -->
   	<!-- pagination -->
   </div>
   <div class="tab-pane fade" id="video" role="tabpanel" aria-labelledby="video-tab">

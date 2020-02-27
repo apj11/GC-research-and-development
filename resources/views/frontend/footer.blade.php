@@ -62,7 +62,7 @@
                             <ul class="link">
                                 <li><i class="fas fa-map-marker-alt"></i><p>Tinkune-32,Kathmandu <span>Nepal</span></p></li>
                                 <li><i class="fas fa-mobile-alt"></i><p>+977 014111992 <span>+977 9841674653</span></p></li>
-                                <li><i class="far fa-envelope"></i><a href="#">support@softechpark.comf<span>info@softechpark.com</span></a></li>
+                                <li><i class="far fa-envelope"></i><a href="https://softechpark.com/">support@softechpark.com<span>info@softechpark.com</span></a></li>
                             </ul>
                         </div> <!-- footer wrapper -->
                     </div><!-- footer-link -->
@@ -94,7 +94,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="design_boss">
-                        <small>Design by <a href="#">softechpark.</a> All Rights Reserved</small>
+                        <small>Design by <a href="https://softechpark.com/">softechpark.</a> All Rights Reserved</small>
                     </div><!-- design_boss -->
                 </div><!-- col -->
                 <div class="offset-md-3 col-md-3">

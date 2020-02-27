@@ -57,7 +57,7 @@ class ContactController extends Controller
         $contact->mobile=$request->get('mobile');
         $contact->message=$request->get('message');
         $contact->save();
-        return back()->with('success','Data has been send successfully');
+        return back()->with('success','Message has been send successfully');
     }
 
     /**

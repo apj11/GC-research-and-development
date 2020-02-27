@@ -28,8 +28,8 @@ Route::resource('blogs','Frontend\BlogController');
 Route::resource('/blogdetails','Frontend\BlogdetailController');
 
 
-Route::group(['middleware' => ['auth:admin']], function() {
-    Route::get('/dashboard','HomeController@index')->name('home');
+    Route::group(['middleware' => ['auth:admin']], function() {
+    Route::get('/admin','HomeController@index')->name('home');
 
     Route::resource('/about','Admin\AboutController');
     Route::get('/about/delete/{id}','Admin\AboutController@destroy')->name('about.destroy');
@@ -38,7 +38,7 @@ Route::group(['middleware' => ['auth:admin']], function() {
     Route::get('/award/delete/{id}','Admin\AwardController@destroy')->name('award.destroy');
 
 
-    Route::resource('/slider','Admin\SliderController');
+//    Route::resource('/slider','Admin\SliderController');
     Route::resource('/service','Admin\ServiceController');
 
     Route::resource('/gallery','Admin\GalleryController');

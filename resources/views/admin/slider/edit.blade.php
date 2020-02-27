@@ -8,7 +8,7 @@
             <div class="block">
                 <!-- General Data Title -->
                 <div class="block-title">
-                    <h2><i class="fa fa-pencil"></i> <strong>Create</strong> Slider</h2>
+                    <h2><i class="fa fa-pencil"></i> <strong>Update</strong> Slider</h2>
                 </div>
                 <!-- END General Data Title -->
 

@@ -38,12 +38,12 @@
         @endforeach
       <div class="col-md-3">
 
-        <div class="input-group md-form form-sm form-2 pl-0 search_blk_inner">
-          <input class="form-control my-0 py-1 lime-border" type="text" placeholder="Search" aria-label="Search">
-          <div class="input-group-append">
-            <span class="input-group-text lime lighten-2" id="basic-text1"><i class="fas fa-search text-grey" aria-hidden="true"></i></span>
-          </div>
-        </div>
+{{--        <div class="input-group md-form form-sm form-2 pl-0 search_blk_inner">--}}
+{{--          <input class="form-control my-0 py-1 lime-border" type="text" placeholder="Search" aria-label="Search">--}}
+{{--          <div class="input-group-append">--}}
+{{--            <span class="input-group-text lime lighten-2" id="basic-text1"><i class="fas fa-search text-grey" aria-hidden="true"></i></span>--}}
+{{--          </div>--}}
+{{--        </div>--}}
         <div class="inner_news_head">
           <h3>RECENT NEWS </h3> <i class="fas fa-file"></i>
         </div><!-- inner_news_head -->
@@ -102,4 +102,4 @@
   <!-- inner_form_footer -->
 
 
-    @endsection
+@endsection
