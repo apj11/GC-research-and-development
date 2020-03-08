@@ -14,10 +14,13 @@
     <link rel="stylesheet" href="{{asset('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css')}}">
     <link href="{{asset('css/hover.css')}}" type="text/css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/js/star-rating.min.js"></script>
     <link href="{{asset('css/style.css')}}" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="{{asset('dist/css/lightbox.min.css')}}">
+    <link href="{{ asset('css/preview.css') }}" rel="stylesheet">
     <link href="{{asset('css/plugins/toastr/toastr.min.css')}}" rel="stylesheet">
-      @stack('styles');
+    
+      @stack('styles')
 </head>
 <body>
 <div class="content content-page">

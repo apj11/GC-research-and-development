@@ -6,10 +6,11 @@ use App\Blog;
 use App\Gallery;
 use App\Partner;
 use App\Productdetails;
-use App\Register;
+use App\User;
 use App\Http\Controllers\Controller;
 use App\Testimonial;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class RegisterController extends Controller
 {
@@ -62,12 +63,14 @@ class RegisterController extends Controller
             'password'=>'required| confirmed |min:6',
             'password_confirmation'=>'required|min:6 |same:password',
             ]);
-        $register =new Register();
-        $register->username=$request->username;
-        $register->email=$request->email;
-        $register->number=$request->number;
-        $register->password=$request->password;
-        $register->save();
+        $user =new User();
+        $user->username=$request->username;
+        $user->email=$request->email;
+        $user->number=$request->number;
+        $password = Hash::make($request->password);
+        $user->password=$password;
+//        $user->password=Hash::$request->password;
+        $user->save();
         return back()->with('success','successfully Registered');
 
     }

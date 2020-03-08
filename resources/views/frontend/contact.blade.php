@@ -18,24 +18,39 @@
 
       <div class="row">
         <div class="col-md-6">
-           <input type="name" name="name" placeholder="Name" required>
+           <input type="name" name="name" class="form-control {{ $errors->has('name' ? 'has-error' :  '') }}" placeholder="Name" >
+                @if($errors->has('name'))
+                                                    <p style="color: red"> {{$errors->first('name')}}</p>
+                                                @endif
         </div><!-- col -->
         <div class="col-md-6">
-           <input type="subject" name="subject" placeholder="Subject" required>
+           <input type="subject" name="subject" class="form-control {{ $errors->has('mobile' ? 'has-error' :  '') }}" placeholder="Subject" >
+                @if($errors->has('subject'))
+                                                    <p style="color: red"> {{$errors->first('subject')}}</p>
+                                                @endif
         </div><!-- col -->
       </div><!-- row -->
         <div class="row mg-t-2p">
         <div class="col-md-6">
-           <input type="email" name="email" placeholder="Emial" required>
+           <input type="email" name="email" class="form-control {{ $errors->has('email' ? 'has-error' :  '') }}" placeholder="Emial" >
+                @if($errors->has('email'))
+                                                    <p style="color: red"> {{$errors->first('email')}}</p>
+                                                @endif
         </div><!-- col -->
         <div class="col-md-6">
-           <input type="mobile" name="mobile" placeholder="Mobile Number" required>
+           <input type="mobile"  name="mobile" class="form-control {{ $errors->has('mobile' ? 'has-error' :  '') }}" placeholder="Mobile Number">
+              @if($errors->has('mobile'))
+                                                    <p style="color: red"> {{$errors->first('mobile')}}</p>
+                                                @endif
         </div><!-- col -->
       </div><!-- row -->
                 <div>
-      <textarea class="mg-t-2p"  name="message"  placeholder="Messages" cols="5" rows="9" required></textarea>
+      <textarea class="mg-t-2p"  name="message" class="form-control {{ $errors->has('message' ? 'has-error' :  '') }}"  placeholder="Messages" cols="5" rows="9" ></textarea>
+           @if($errors->has('message'))
+                                                    <p style="color: red"> {{$errors->first('message')}}</p>
+                                                @endif
                 </div>
-          <button class="btn btn-success" type="submit" ><span>Sent Message</span></button>
+          <button class="btn_default" type="submit" ><span>Sent Message</span></button>
      </form>
     </div><!-- footer_form_main -->
     </div><!-- col -->

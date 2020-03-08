@@ -70,9 +70,9 @@
                                 @if(Auth::guard('admin')->check())
                                     {{Auth::guard('admin')->user()->userName}}
                                 @endif
-                                @if(Auth::guard('web')->check())
-                                    {{Auth::guard('web')->user()->userName}}
-                                @endif
+{{--                                @if(Auth::guard('web')->check())--}}
+{{--                                    {{Auth::guard('web')->user()->userName}}--}}
+{{--                                @endif--}}
                             </h6>
                             <span>Administrator</span>
                         </div>
@@ -86,9 +86,9 @@
                     @if(Auth::guard('admin')->check())
                         <a href="{{route('logout')}}" class="dropdown-item"><i data-feather="log-out"></i>Sign Out</a>
                     @endif
-                    @if(Auth::guard('web')->check())
-                        <a href="{{route('user.logout')}}" class="dropdown-item"><i data-feather="log-out"></i>Sign Out</a>
-                    @endif
+{{--                    @if(Auth::guard('web')->check())--}}
+{{--                        <a href="{{route('user.logout')}}" class="dropdown-item"><i data-feather="log-out"></i>Sign Out</a>--}}
+{{--                    @endif--}}
                 </div>
             </div><!-- dropdown-menu -->
         </div>

@@ -1,18 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Frontend;
-
+namespace App\Http\Controllers\Admin;
+use App\User;
 use App\Http\Controllers\Controller;
-use App\Partner;
-use App\Testimonial;
-use App\Blog;
-use App\Http\Controllers\Session;
-use App\Productdetails;
-use App\Gallery;
-use App\Award;
 use Illuminate\Http\Request;
 
-class IndexController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,19 +14,9 @@ class IndexController extends Controller
      */
     public function index()
     {
-        $award=Award::latest()->paginate(3);
-        $productdetails=Productdetails::latest()->paginate(3);
-        $blog=Blog::latest()->paginate(2);
-        $testimonial=Testimonial::all();
-        $gallery=Gallery::all();
-        $partner=Partner::all();
-        return view ('frontend.index')
-            ->with('testimonial',$testimonial)
-            ->with('blog',$blog)
-            ->with('award',$award)
-            ->with('gallery',$gallery)
-            ->with('productdetails',$productdetails)
-            ->with('partner',$partner);
+        $user=User::all();
+        return view('admin.UserDetails.index')
+            ->with('user',$user);
     }
 
     /**

@@ -55,9 +55,56 @@
 
                 </ul>
             </div>
-            <div class="login_top">
-                <a href="#" class="btn_default">Login/Register</a>
-            </div><!-- login_top -->
+
+           
+           
+
+           <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered top_login" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <ul class="nav nav-tabs justify-content-center pt-4" id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active text-primary" id="pills-login-tab" data-toggle="pill" href="#pills-login" role="tab" aria-controls="pills-login"
+                               aria-selected="true">LOGIN</a>
+                        </li>
+                      <!--   <li class="nav-item">
+                            <a class="nav-link text-primary" id="pills-register-tab" data-toggle="pill" href="#pills-register" role="tab" aria-controls="pills-register"
+                               aria-selected="false">REGISTER</a>
+                        </li> -->
+                    </ul>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                   <div class="login_social">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="main_login">
+                                <h3>Login With</h3>
+                                <div class="social_media">
+                                    <a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                                </div><!-- social_media -->
+                            </div><!-- main_login -->
+                        </div><!-- col -->
+                  <div class="col-md-6">
+                            <div class="main_login">
+                                <h3>Login With</h3>
+                                <div class="social_media media_gmail">
+                                    <a href="#"><i class="fab fa-google"></i></a>
+                                </div><!-- social_media -->
+                            </div><!-- main_login -->
+                        </div><!-- col -->
+                    </div><!-- row -->
+                   </div><!-- login_social -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+
         </nav>
     </div><!-- container -->
 </div>

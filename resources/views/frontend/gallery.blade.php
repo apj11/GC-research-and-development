@@ -27,14 +27,12 @@
   <div class="tab-pane fade show active" id="photo" role="tabpanel" aria-labelledby="photo-tab">
   	<div class="row">
         @foreach($gallery as $galleries)
-  		<div class="col-md-3 no-pad">
+  		<div class="col-md-3 ">
 						<div class="gallery_grid_more padding_right02p">
-							<img src="{{asset(''.$galleries->image)}}" width="200" height="200">
-							<div class="gallery_overlay">
-                                <a  href="{{asset(''.$galleries->image)}}" data-lightbox="example-1">
-                                    <img class="example-image" src="{{asset(''.$galleries->image)}}">
-                                </a>
-							</div><!-- gallery_overlay -->
+                            <a  href="{{asset(''.$galleries->image)}}" data-lightbox="example-1">
+                                <img class="example-image" src="{{asset(''.$galleries->image)}}">
+                            </a>
+
 						</div><!-- gallery_grid_more -->
           </div>
         @endforeach

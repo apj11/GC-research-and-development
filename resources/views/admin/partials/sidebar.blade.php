@@ -52,13 +52,19 @@
               </nav>
             </li>
 
-{{--            <li class="nav-item">--}}
-{{--                    <a href="" class="nav-link with-sub"><i data-feather="file-text"></i>Notice</a>--}}
-{{--                    <nav class="nav nav-sub">--}}
-{{--                    <a href="{{route('notice.create')}}" class="nav-sub-link">New Notice</a>--}}
-{{--                    <a href="{{route('notice.index')}}" class="nav-sub-link">All Notice</a>--}}
-{{--              </nav>--}}
-{{--            </li>--}}
+            <li class="nav-item">
+                    <a href="" class="nav-link with-sub"><i data-feather="file-text"></i>Comment</a>
+                    <nav class="nav nav-sub">
+                    <a href="{{route('comment.index')}}" class="nav-sub-link">All Comments</a>
+              </nav>
+            </li>
+
+            <li class="nav-item">
+                <a href="" class="nav-link with-sub"><i data-feather="file-text"></i>User Details</a>
+                <nav class="nav nav-sub">
+                    <a href="{{route('userdetails.index')}}" class="nav-sub-link">All Notice</a>
+                </nav>
+            </li>
 
             <li class="nav-item">
                     <a href="" class="nav-link with-sub"><i data-feather="file-text"></i>Our Partners</a>

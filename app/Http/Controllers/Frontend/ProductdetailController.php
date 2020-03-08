@@ -5,6 +5,7 @@ use App\Productdetails;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Blog;
+use App\Comment;
 class ProductdetailController extends Controller
 {
     /**
@@ -14,10 +15,12 @@ class ProductdetailController extends Controller
      */
     public function index()
     {
+        $comment=Comment::all();
         $blog=Blog::latest()->paginate(2);
         $data['productdetails'] =Productdetails::all();
         return view('frontend.productdetails', $data)
-            ->with('blog',$blog);
+            ->with('blog',$blog)
+            ->with('comment',$comment);
     }
 
     /**
@@ -49,11 +52,15 @@ class ProductdetailController extends Controller
      */
     public function show($id)
     {
+        $comment=Comment::where('productdetails_id',$id)->where('status',0)->get();
+
+//        dd($comment);
         $blog=Blog::all();
         $data['productdetails'] = Productdetails::findOrFail($id);
 //        dd($data);
         return view('frontend.productdetails', $data)->with('productdetails',$data)
-        ->with('blog',$blog);
+        ->with('blog',$blog)
+            ->with('comment',$comment);
     }
 
     /**

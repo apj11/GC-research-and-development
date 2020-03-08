@@ -8,6 +8,9 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
+
+    protected $guard = 'web';
+
     use Notifiable;
 
     /**
@@ -15,8 +18,14 @@ class User extends Authenticatable
      *
      * @var array
      */
+
+    function socialProviders()
+    {
+        return $this->hasMany(SocialProvider::class);
+    }
+
     protected $fillable = [
-        'name', 'email', 'password',
+        'username', 'email', 'password',
     ];
 
     /**

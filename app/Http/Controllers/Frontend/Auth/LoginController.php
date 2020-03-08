@@ -1,85 +1,85 @@
 <?php
 
 namespace App\Http\Controllers\Frontend\Auth;
-
+use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\Controller;
+use App\Providers\RouteServiceProvider;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Session;
+use App\User;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
+    /*
+    |--------------------------------------------------------------------------
+    | Login Controller
+    |--------------------------------------------------------------------------
+    |
+    | This controller handles authenticating users for the application and
+    | redirecting them to your home screen. The controller uses a trait
+    | to conveniently provide its functionality to your applications.
+    |
+    */
+
+    use AuthenticatesUsers;
 
     /**
-     * Show the form for creating a new resource.
+     * Where to redirect users after login.
      *
-     * @return \Illuminate\Http\Response
+     * @var string
      */
-    public function create()
-    {
-        //
-    }
+    protected $redirectTo = RouteServiceProvider::HOME;
 
     /**
-     * Store a newly created resource in storage.
+     * Create a new controller instance.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return void
      */
-    public function store(Request $request)
+    public function __construct()
     {
-        //
+        $this->middleware('guest:web')->except('logout');
+    }
+    public  function  showLoginForm()
+    {
+        return view('frontend.index');
+    }
+    public function auth(){
+
+        $this->guard('web');
+    }
+    public function login(Request $request)
+    {
+        request()->validate([
+            'email' => 'required',
+            'password' => 'required',
+        ]);
+//    dd($request->all());
+        if ($credentials = $request->only('email', 'password')) {
+            if (Auth::guard('web')->attempt($credentials)) {
+                return redirect()->route('index')->with('success', 'You are Logged in');
+
+            }
+
+            return Redirect::to("contacts")->with('info', ' Loggin Failled');
+
+        }
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+
+    private function loginFailed(){
+        return redirect()
+            ->back()
+            ->withInput()
+            ->with('error','Login failed, please try again!');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+    public function logout()
     {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        Auth::guard('web')->logout();
+        return redirect()
+            ->route('index')
+            ->with('success','Admin has been logged out!');
     }
 }

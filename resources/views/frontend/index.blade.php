@@ -17,7 +17,7 @@
     <link href="{{asset('css/style.css')}}" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="{{asset('dist/css/lightbox.min.css')}}">
     <link href="{{asset('css/plugins/toastr/toastr.min.css')}}" rel="stylesheet">
-    @stack('styles');
+    @stack('styles')
 </head>
 <body>
 	<section class="slider_main">
@@ -92,12 +92,8 @@
 
 
 
-                <div class="login_top">
-                    <a href="#" class="btn_default" data-toggle="modal" data-target="#exampleModalCenter">Login/Register</a>
+                
 
-
-
-                </div>
 
                 <!-- login_top -->
 			</nav>
@@ -178,7 +174,7 @@
 				<P>Don't find customers for your products for your customers </P>
 			</div><!-- product_head -->
 			<div class="row">
-				<div class="offset-2 col-md-8">
+				<div class="offset-md-2 col-md-8">
 					<div class="row">
 						@foreach($productdetails as $productdetail)
 						<div class="col-md-4">
@@ -460,106 +456,36 @@
                             <a class="nav-link active text-primary" id="pills-login-tab" data-toggle="pill" href="#pills-login" role="tab" aria-controls="pills-login"
                                aria-selected="true">LOGIN</a>
                         </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link text-primary" id="pills-register-tab" data-toggle="pill" href="#pills-register" role="tab" aria-controls="pills-register"
-                               aria-selected="false">REGISTER</a>
-                        </li>
+{{--                        <li class="nav-item">--}}
+{{--                            <a class="nav-link text-primary" id="pills-register-tab" data-toggle="pill" href="#pills-register" role="tab" aria-controls="pills-register"--}}
+{{--                               aria-selected="false">REGISTER</a>--}}
+{{--                        </li>--}}
                     </ul>
-
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="container">
-                        <div class="card mx-auto border-0">
-
-
-                            <div class="card-body pb-4">
-                                <div class="tab-content" id="pills-tabContent">
-                                    <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="pills-login-tab">
-                                        <form method="get" action="">
-                                            @csrf
-                                            <div class="form-group">
-                                                <input type="email" name="email" class="form-control" id="email" placeholder=" Email" required autofocus>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <input type="password" name="password" class="form-control" id="password" id="password" placeholder="Password" required>
-                                            </div>
-
-                                            <div class="text-center">
-                                                <button type="submit" class="btn btn-primary out-width_des">LOGIN
-                                                    <div class="des_aft_bef"></div>
-                                                </button>
-
-                                            </div>
-
-                                            <div class="bottom_form pt-4">
-                                                <a href="#" class="red_color">Forgot Your Password?</a>
-                                                <!-- <a class="nav-link" id="pills-register-tab" data-toggle="pill" href="#pills-register" role="tab" aria-controls="pills-register"
-                                                  aria-selected="false">Register Here !</a> -->
-
-                                            </div>
-                                        </form>
-                                    </div>
-
-                                    <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="pills-register-tab">
-                                        <form method="post" action="{{route('registers.store')}}">
-                                            @csrf
-                                            <div class="form-group">
-                                                <input type="text" name="username" id="username" class="form-control {{ $errors->has('username' ? 'has-error' :  '') }}" placeholder="Full Name" autofocus>
-                                                @if($errors->has('username'))
-                                                    <p style="color: red">{{$errors->first('username')}}</p>
-                                                    @endif
-                                            </div>
-
-                                            <div class="form-group">
-                                                <input type="email" name="email" id="email" class="form-control{{ $errors->has('email' ? 'has-error' :  '') }}" placeholder="Email">
-                                                @if($errors->has('email'))
-                                                   <p style="color: red"> {{$errors->first('email')}}</p>
-                                                    @endif
-
-
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="text" name="number" id="number" class="form-control {{ $errors->has('number' ? 'has-error' :  '') }}" placeholder="Contact Number">
-                                                @if($errors->has('number'))
-                                                    <p style="color: red"> {{$errors->first('number')}}</p>
-                                                @endif
-                                            </div>
-
-                                            <div class="form-group">
-                                                <input type="password" name="password" id="password" class="form-control{{$errors->has('password'?'has-error':'')}}" placeholder="Set a password">
-                                                @if($errors->has('password'))
-                                                    <p style="color: red"> {{$errors->first('password')}}</p>
-                                                @endif
-                                            </div>
-
-                                            <div class="form-group">
-                                                <input type="password" name="password_confirmation" id="password-confirm" class="form-control{{$errors->has('password_confirmation'?'has-error':'')}}" placeholder="Retype Password">
-                                                @if($errors->has('password_confirmation'))
-                                                    <p style="color: red"> {{$errors->first('password_confirmation')}}</p>
-                                                @endif
-                                            </div>
-                                            <div class="form-group form-check pt-3">
-                                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                <label class="form-check-label" for="exampleCheck1">I accept all the terms and conditions</label>
-                                            </div>
-
-                                            <div class="text-center">
-                                                <button type="submit" class="btn btn-primary out-width_des">REGISTER
-                                                    <div class="des_aft_bef"></div>
-                                                </button>
-
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                   <div class="login_social">
+                   	<div class="row">
+                   		<div class="col-md-6">
+                   			<div class="main_login">
+                   				<h3>Login With</h3>
+                   				<div class="social_media">
+                   					<a href="{{ url('/auth/facebook') }}"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                   				</div><!-- social_media -->
+                   			</div><!-- main_login -->
+                   		</div><!-- col -->
+                  <div class="col-md-6">
+                   			<div class="main_login">
+                   				<h3>Login With</h3>
+                   				<div class="social_media media_gmail">
+                   					<a href="{{ url('/auth/google') }}"><i class="fab fa-google"></i></a>
+                   				</div><!-- social_media -->
+                   			</div><!-- main_login -->
+                   		</div><!-- col -->
+                   	</div><!-- row -->
+                   </div><!-- login_social -->
                 </div>
 
             </div>

@@ -203,6 +203,7 @@ background: white;
 
 .top_login .modal-header{
 	background-color: black;
+	    padding: 0px 14px;
 }
 
 .top_login .nav-link{
@@ -311,6 +312,34 @@ background-color: black;
 .card-body .btn:hover{
 	background-color: black !important;
 }
+
+.main_login h3{
+	font-weight: bold;
+	    font-size: 20px;
+	    text-transform: lowercase;
+}
+.main_login	.social_media i{
+	background: #3b5998;
+    color: white;
+    padding: 12px 21px;
+    font-size: 30px;
+}
+.main_login .media_gmail i{
+	background: #D44638;
+}
+.main_login{
+	text-align: center;
+}
+
+.top_login .modal-body{
+		padding: 2rem 1rem;
+}
+@media (min-width: 576px){
+	.top_login{
+		max-width: 390px;
+	}
+}
+
 /*..............top-navigation.................*/
 
 .top_navigation .navbar-brand{
@@ -358,7 +387,8 @@ background-color: black;
 	color: green !important;
 	}*/
 	.btn_default{
-		color: white;
+		color: black;
+		font-weight: bold;
 		background: #96ff06;
 		padding: 8px 20px;
 		border-radius: 20px;
@@ -478,7 +508,7 @@ background-color: black;
 
 	.services .service_blk i{
 		font-size: 120px;
-	} 
+	}
 	.service_blk{
 		background-color: white;
 		padding-top: 20%;
@@ -552,7 +582,7 @@ background-color: black;
 	}
 	.rating_blk{
 		display: flex;
-		padding-top: 5%;
+		/*padding-top: 5%;*/
 	}
 
 	.rating_blk h6{
@@ -562,7 +592,7 @@ background-color: black;
 	}
 
 	.rating_blk i{
-		font-size: 12px;
+		    font-size: 26px;
 	}
 
 	.rating {
@@ -1243,7 +1273,7 @@ color: white;
 	/*......................gallery page......................*/
 
 	.inner_slider_banner {
-		background-image: 
+		background-image:
 	}
 
 	.gallery_tab{
@@ -1320,14 +1350,14 @@ color: white;
     font-weight: bold;
     font-size: 14px;
     transition: 1s all;
-    text-align: center;	
+    text-align: center;
 }
 
 .inner_contact_btn a:hover{
 	background-color: black;
 	color: white;
 	transition: 1s all;
-}	
+}
 .inner_slider_banner{
 	      background-image: url(../images/restaurant.png);
     background-repeat: no-repeat;
@@ -1414,7 +1444,7 @@ color: white;
 		    font-size: 1rem;
 		    color: #9b9b9b;
 
-	}  
+	}
 	.card-body .btn{
 		       color: #212529;
     font-weight: bold;
@@ -1481,7 +1511,7 @@ color: white;
 		}
 			.inner_news_head h3{
 				font-size: 20px;
-    font-weight: 600;	
+    font-weight: 600;
     margin-bottom: 0;
 			}
 			.inner_news_head{
@@ -1552,7 +1582,7 @@ color: white;
  	.about_section{
  		padding-top: 4%;
  	}
- 	.about_section .nav-tabs{	
+ 	.about_section .nav-tabs{
  		display: inherit;
  	}
  	.about_section .nav-tabs i{
@@ -1581,7 +1611,7 @@ color: white;
  	}
  	.about_section .nav-tabs .active i{
  			color: black;
- 			
+
  	}
  	.about_section .nav-tabs .nav-item{
  		margin-left: 0;
@@ -1620,7 +1650,7 @@ color: white;
     border: 1px solid #9b9b9b;
                padding: 30px 40px;
  	}
-  
+
  	.overview_image img{
  		  height: 40px;
     width: 40px;
@@ -1678,7 +1708,7 @@ color: white;
 
  .service_card_main h4{
  	font-weight: bold;
- }	   
+ }
 
  .service_card_main span{
  	display: block;
@@ -1830,6 +1860,7 @@ position: absolute;
 }
 .comment_box_comment{
 	text-align: right;
+	margin-top: 6%;
 }
 .comment_box_comment a{
 	    background: #96ff06;
@@ -1847,7 +1878,7 @@ position: absolute;
 }
 .comment_date span{
 	    background: #96ff06;
-    color: white;
+    color: black;
     padding: 7px 25px;
     display: inline-block;
     border-radius: 30px 0px 0px 30px;
@@ -1865,6 +1896,9 @@ position: absolute;
     border-color: #dee2e6 #dee2e6 #fff;
     border: none;
     border-bottom: 2px solid #96ff06;
+        padding: 6px 0px;
+        margin-bottom: 8px;
+            font-size: 20px;
 }
 .product_post .nav-tabs{
 	padding-bottom: 2%;
@@ -1882,6 +1916,20 @@ position: absolute;
 	margin-top: 30%;
 }
 
+.modal-header .close{
+	    padding: 25px 14px;
+}
+
+.comment_head{
+	margin-bottom: 2%;
+}
+.comment_rate{
+	margin-top: 3%;
+}
+.star_main i{
+    color: #ffc107;
+    font-size: 12px !important;
+}
 
 
 
