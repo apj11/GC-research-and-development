@@ -100,11 +100,11 @@
                 <div class="offset-md-3 col-md-3">
                     <div class="footer_end_social">
                         <ul class="clearfix">
-                            <li class="icon_bg1"><a href="https://www.facebook.com/Softechpark4"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                            <li class="icon_bg1"><a href="https://www.facebook.com/GCRESEARCHANDDEVELOPMENT/"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
                             <li class="icon_bg2"><a href="https://twitter.com/softechpark"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
                             <li class="icon_bg1"><a href=""><i class="fab fa-instagram" aria-hidden="true"></i></a>
                             </li>
-                            <li class="icon_bg2"><a href="https://www.youtube.com/channel/UCsxhtxRoxBaD9-oemjvZq4A"><i class="fab fa-youtube" aria-hidden="true"></i></a> </li>
+                            <li class="icon_bg2"><a href="https://www.youtube.com/channel/UCq-K2J0e1Yab3zAxs7FvCyg"><i class="fab fa-youtube" aria-hidden="true"></i></a> </li>
                             <li class="icon_bg1"><a href="#"><i class="fab fa-google-plus-g" aria-hidden="true"></i></a></li>
                         </ul>
                     </div><!-- footer_end_social -->

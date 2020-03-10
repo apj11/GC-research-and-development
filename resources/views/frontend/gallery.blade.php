@@ -56,67 +56,82 @@
     <!-- First slide -->
     <div class="carousel-item active">
       <!--Mask color-->
-      <div class="view">
-{{--          {{dd($categories->gallery->image)}}--}}
-          @foreach($categories as $category)
-        <!--Video source-->
-        <video class="video-fluid" autoplay loop muted>
-{{--          <source src="{{asset(''.$category->gallery->image)}}" type="video/mp4" />--}}
-            </video>
-        <div class="mask rgba-indigo-light"></div>
-              @endforeach
-      </div>
+        <div class="view">
+            <!--Video source-->
 
+            <iframe width="1080" height="500" src="https://www.youtube.com/embed/5GuLP0eESh0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+         <!--    <video class="video-fluid" autoplay loop muted>
+                <source src="https://mdbootstrap.com/img/video/animation-intro.mp4" type="video/mp4" />
+            </video> -->
+            <div class="mask rgba-purple-slight"></div>
+        </div>
       <!--Caption-->
       <div class="carousel-caption">
         <div class="animated fadeInDown">
-          <h3 class="h3-responsive">Light mask</h3>
+          <h3 class="h3-responsive">SHOX DEVICE</h3>
         </div>
       </div>
       <!--Caption-->
     </div>
     <!-- /.First slide -->
 
+
+
     <!-- Second slide -->
     <div class="carousel-item">
       <!--Mask color-->
       <div class="view">
         <!--Video source-->
-        <video class="video-fluid" autoplay loop muted>
-          <source src="https://mdbootstrap.com/img/video/animation-intro.mp4" type="video/mp4" />
-        </video>
+
+
+          <div class="fb-video" data-href="https://www.facebook.com/myrepublica/videos/1101052103433883/" data-width="1080" data-show-text="false"><blockquote cite="https://developers.facebook.com/myrepublica/videos/1101052103433883/" class="fb-xfbml-parse-ignore"><a href="https://developers.facebook.com/myrepublica/videos/1101052103433883/">SHOX: Earthquake and India’s blockade inspired fuel saver</a><p>GC has completed the invention. Named as ‘Shishir&#039;s Hydrogen Oxygen Device’ aka SHOX, the machine makes cars and motorcycles run on 40% water and 60% petroleum products.
+                      Link -- https://t.ly/OvOKD</p>Posted by <a href="https://www.facebook.com/myrepublica/">Republica</a> on Thursday, September 12, 2019</blockquote></div>
+{{--        <video class="video-fluid" autoplay loop muted>--}}
+{{--          <source src="https://mdbootstrap.com/img/video/animation-intro.mp4" type="video/mp4" />--}}
+{{--        </video>--}}
         <div class="mask rgba-purple-slight"></div>
       </div>
 
       <!--Caption-->
       <div class="carousel-caption">
         <div class="animated fadeInDown">
-          <h3 class="h3-responsive">Super light mask</h3>
+          <h3 class="h3-responsive"> ABOUT SHOX DEVICE</h3>
         </div>
       </div>
       <!--Caption-->
     </div>
     <!-- /.Second slide -->
 
+
+
     <!-- Third slide -->
     <div class="carousel-item">
       <!--Mask color-->
       <div class="view">
         <!--Video source-->
-        <video class="video-fluid" autoplay loop muted>
-         <source src="https://mdbootstrap.com/img/video/Lines.mp4" type="video/mp4" />
-        </video>
+{{--        <video class="video-fluid" autoplay loop muted>--}}
+{{--         <source src="https://mdbootstrap.com/img/video/Lines.mp4" type="video/mp4" />--}}
+{{--        </video>--}}
+          <div class="fb-video" data-href="https://www.facebook.com/nagariknews/videos/729072817536395/UzpfSTIzNjQwNTI3MTA1NDA2MDA6MjUwMzI3NDYzMzI4NTA3Mw/?epa=SEARCH_BOX" data-width="1080" data-show-text="false"><blockquote cite="https://developers.facebook.com/nagariknews/videos/729072817536395/" class="fb-xfbml-parse-ignore"><a href="https://developers.facebook.com/nagariknews/videos/729072817536395/">हो मैले इन्धन बचाउने उपकरण बनाए.</a><p>हो मैले इन्धन बचाउने उपकरण बनाए.
+                      भारतले गरेको पेट्रोलियम पदार्थको नाकाबन्दी पछि शिशिर जिसीले सवारी साधनको इन्धन बचाउने उपकरण बनाउने निधो गरे।
+                      शक्सले सवारी साधनमा लगाएपछि सवारी साधनले कम इन्धन खर्च गर्छ।
+                      शक्स (शिशिर्स हाइड्रोजन अक्शिजन डिभाइस) नामाकरण गरिएको यो उपकरणले ४० प्रतिशत पानी र ६० प्रतिशत पेट्रोल अथवा डिजेलले गाडी चल्न सक्छ।
+                      तर हाल गुडिरहेका सवारी साधनमा लगाइएका इन्जिनले सय प्रतिशत पेट्रोल तथा डिजेलको प्रयोग गरिरहेका छन्।
+                      थप जानकारीको लागि यस लिन्कमा क्लिक गर्नुहोस: https://nagariknews.nagariknetwork.com/news/91112/</p>Posted by <a href="https://www.facebook.com/nagariknews/">NagarikNews</a> on Tuesday, September 10, 2019</blockquote></div>
         <div class="mask rgba-black-strong"></div>
       </div>
 
       <!--Caption-->
       <div class="carousel-caption">
         <div class="animated fadeInDown">
-          <h3 class="h3-responsive">Strong mask</h3>
+          <h3 class="h3-responsive"> ABOUT SHOX MACHINE </h3>
         </div>
       </div>
       <!--Caption-->
     </div>
+
+
+
     <!-- /.Third slide -->
   </div>
   <!--/.Slides-->
@@ -143,5 +158,7 @@
           $("#mdb-lightbox-ui").load("mdb-addons/mdb-lightbox-ui.html");
       });
   </script>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0&appId=1136022620062279&autoLogAppEvents=1"></script>
 
 @endsection

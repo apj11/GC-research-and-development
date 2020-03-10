@@ -195,7 +195,13 @@ background: white;
 
 
 
-
+.sticky {
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+      background: #000000b8;
+    z-index: 99 !important;
+}
 /*..........top-login..............*/
 .top_login .nav-tabs{
 	width: 100%;
@@ -571,6 +577,13 @@ background-color: black;
 	.section_head p{
 		font-size: 14px;
 	}
+	.product_blk_head .product_blk{
+		padding: 0;
+	}
+	.product_blk_head_main .product_blk{
+		    padding-top: 40% !important;
+    padding-bottom: 40% !important;
+	}
 	.product_blk{
 		text-align: center;
 		background-color: #f6f6f6;
@@ -582,17 +595,18 @@ background-color: black;
 	}
 	.rating_blk{
 		display: flex;
+		justify-content: space-between;
 		/*padding-top: 5%;*/
 	}
 
 	.rating_blk h6{
 		font-size: 18px;
 		font-weight: bold;
-		margin-right: 15%;
+		width: 50%;
 	}
 
 	.rating_blk i{
-		    font-size: 26px;
+		        font-size: 12px;
 	}
 
 	.rating {
@@ -636,7 +650,16 @@ background-color: black;
 		background-color: #adf050;
 		padding: 6px;
 		transition: 1s;
+		position: absolute;
+    bottom: 6%;
 	}
+	.product_overlay_content i:first-child{
+		left: 25%;
+	}
+.product_overlay_content i:last-child{
+	right: 25%;
+    left: inherit;
+}
 	.product_overlay_content a{
 		position: absolute;
 		bottom: 6%;
@@ -734,6 +757,9 @@ background-color: black;
 		}
 
 		/*.............testimonial section.......*/
+		.owl-nav{
+	display: none;
+}
 
 		.testimonial_section {
   display: block;
@@ -1303,6 +1329,9 @@ color: white;
 			    padding-top: 3%;
     padding-bottom: 3%;
 		}
+		 .gallery_tab .nav-tabs .nav-link.active{
+		 	padding:0.3rem 3rem !important;
+		 }
 		.gallery_tab .nav-link{
 			padding: 0.3rem 3rem;
 			border-radius: 0;
@@ -1395,11 +1424,21 @@ color: white;
 /*.....................blog page...............*/
 
 .card_blk{
-	padding-top: 3%;
     padding-bottom: 3%;
+}
+.card_blk .card-body .card-text{
+	    height: 75px;
+    overflow: hidden;
+}
+.card_blk .card-body h3{
+	height: 35px;
+	overflow: hidden;
 }
 	.card_img{
 		position: relative;
+	}
+	.card_img img{
+		height: 250px;
 	}
 	.date_pick{
 	    position: absolute;
@@ -1769,8 +1808,8 @@ position: absolute;
 
     /*......................product page.............*/
     .product_view_zoom{
-    	padding-top: 5%;
-    	    padding-bottom: 2%;
+    	    margin-top: 2%;
+    	    margin-bottom: 2%;
     }
     .iz {
   position: relative;
@@ -1844,6 +1883,9 @@ position: absolute;
 }
 .no_flex h6{
 	margin-bottom: 3%;
+}
+.no_flex h6{
+	width: inherit;
 }
 .product_view_zoom .category ul li span i{
 	margin-right: 2%;
@@ -2035,3 +2077,5 @@ position: absolute;
 		border: none;
 	}
 }
+
+

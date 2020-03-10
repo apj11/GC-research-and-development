@@ -47,13 +47,46 @@
                 </div><!-- category -->
                 <hr>
                 <div class="rating_blk">
-                  <div class="rating">
-                    <input id="rating-15" type="radio" name="rating" value="5"><label for="rating-15"><i class="fas fa-3x fa-star"></i></label>
-                    <input id="rating-14" type="radio" name="rating" value="4" checked=""><label for="rating-14"><i class="fas fa-3x fa-star"></i></label>
-                    <input id="rating-13" type="radio" name="rating" value="3"><label for="rating-13"><i class="fas fa-3x fa-star"></i></label>
-                    <input id="rating-12" type="radio" name="rating" value="2"><label for="rating-12"><i class="fas fa-3x fa-star"></i></label>
-                    <input id="rating-11" type="radio" name="rating" value="1"><label for="rating-11"><i class="fas fa-3x fa-star"></i></label>
-                  </div>
+                    <div class="rating">
+                        @if($rating = 5)
+                            <div class="star_main ">
+                                <i class="fas fa-3x fa-star"></i>
+                                <i class="fas fa-3x fa-star"></i>
+                                <i class="fas fa-3x fa-star"></i>
+                                <i class="fas fa-3x fa-star"></i>
+                                <i class="fas fa-3x fa-star"></i>
+                            </div>
+                        @endif
+                        @if($rating<=4)
+                            <div class="star_main">
+                                <i class="fas fa-3x fa-star"></i>
+                                <i class="fas fa-3x fa-star"></i>
+                                <i class="fas fa-3x fa-star"></i>
+                                <i class="fas fa-3x fa-star"></i>
+
+                            </div>
+                        @endif
+                        @if($rating <=3)
+                                <div class="star_main">
+                                <i class="fas fa-3x fa-star"></i>
+                                <i class="fas fa-3x fa-star"></i>
+                                <i class="fas fa-3x fa-star"></i>
+                            </div>
+                        @endif
+                        @if($rating <= 2)
+                            <div class="star_main">
+                                <i class="fas fa-3x fa-star"></i>
+                                <i class="fas fa-3x fa-star"></i>
+
+                            </div>
+                        @endif
+                        @if($rating <=1)
+                            <div class="star_main">
+                                <i class="fas fa-3x fa-star"></i>
+
+                            </div>
+                        @endif
+                    </div>
                 </div>
   </div><!-- col -->
         @endforeach

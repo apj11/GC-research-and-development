@@ -29,7 +29,7 @@
             <h4>For Any Service</h4>
             <span>Best Machine For You</span>
             <span>Vehicle Has Arrived !!</span>
-            <a href="#">CONTACT US</a>
+            <a href="{{route('contacts.index')}}">CONTACT US</a>
           </div><!-- service_card_main -->
         </div><!-- service_card -->
 <div class="testimonial_about">

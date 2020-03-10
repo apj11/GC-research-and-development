@@ -14,6 +14,7 @@ class CommentController extends Controller
      */
     public function index()
     {
+
         $comment=Comment::all();
         return view('admin.comment.index')
             ->with('comment',$comment);
@@ -48,7 +49,7 @@ class CommentController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**

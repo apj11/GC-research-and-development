@@ -26,7 +26,7 @@
         </div><!-- row -->
     </div><!-- container -->
 </section><!-- top_head -->
-<div class="top_navigation top_navigation2 nav_no_pos">
+<div id="navbar" class="top_navigation top_navigation2 nav_no_pos">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

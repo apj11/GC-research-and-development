@@ -64,7 +64,7 @@ class CommentController extends Controller
         $comment->save();
         //     }
 
-            return back()->with('success','submmited');
+            return back()->with('success','Your comment will be approved by admin and you will be able to see your comment');
         }
 
 

@@ -20,16 +20,18 @@
             <div class="offset-2 col-md-8">
                 <div class="row">
                     @foreach($peoductdetails as $productdetail)
-                        <div class="col-md-4">
+                        <div class="col-md-4 mg-t-3p">
                             <div class="product_blk_head">
                                 <div class="product_blk">
-                                    <img src="{{asset(''.$productdetail->image)}}" height="200px"></img>
+                                       <a href="{{route('productdetails.show', $productdetail->id)}}">
+                                    <img src="{{asset(''.$productdetail->image)}}" height="200px">
                                     <div class="product_overlay_content">
-                                        <a href="{{route('productdetails.show', $productdetail->id)}}">
+                                     
                                             <i class="far fa-comments"></i>
-                                        </a>
-                                        <a href="{{route('productdetails.show', $productdetail->id)}}"><i class="far fa-star"></i></a>
+                                     
+                                      <i class="far fa-star"></i>
                                     </div><!-- product_overlay_content -->
+                                </a>
                                 </div><!-- product_blk -->
                                 <div class="rating_blk">
                                     <h6>{{$productdetail->title}}</h6>
