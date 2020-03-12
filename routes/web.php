@@ -52,8 +52,11 @@ Route::get('auth/{provider}/callback', 'Auth\RegisterController@handleProviderCa
 
     Route::resource('/service','Admin\ServiceController');
 
+        Route::resource('/social','Admin\SocialController');
+        Route::get('/social/delete/{id}','Admin\SocialController@destroy')->name('social.destroy');
 
-    Route::resource('/userdetails','Admin\UserController');
+
+        Route::resource('/userdetails','Admin\UserController');
 
         Route::resource('/comment','Admin\CommentController');
         Route::post('/changeStatus','Admin\CommentController@changeStatus');

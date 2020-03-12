@@ -8,7 +8,7 @@
                         <div class="block">
                             <!-- General Data Title -->
                             <div class="block-title">
-                                <h2><i class="fa fa-pencil"></i> <strong>Create</strong> Social link</h2>
+                                <h2><i class="fa fa-pencil"></i> <strong>Create</strong> Company Social link</h2>
                             </div>
                             <!-- END General Data Title -->
 
@@ -23,6 +23,53 @@
 {{--                                    </div>--}}
 {{--                                </div>--}}
                                 <div class="form-group">
+                                    <label class="col-md-3 control-label" for="product-name">Email</label>
+                                    <div class="col-md-9">
+                                        <input type="text" id="email" name="email" class="form-control {{ $errors->has('email') ? 'has-error' : '' }}" placeholder="Enter link..">
+
+
+                                        @if ($errors->has('email'))
+                                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                        @endif
+
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="product-name">Phone</label>
+                                    <div class="col-md-9">
+                                        <input type="text" id="phone" name="phone" class="form-control {{ $errors->has('phone') ? 'has-error' : '' }}" placeholder="Enter link..">
+
+
+                                        @if ($errors->has('phone'))
+                                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('phone') }}</strong>
+                                    </span>
+                                        @endif
+
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="product-name">Address</label>
+                                    <div class="col-md-9">
+                                        <input type="text" id="address" name="address" class="form-control {{ $errors->has('address') ? 'has-error' : '' }}" placeholder="Enter link..">
+
+
+                                        @if ($errors->has('address'))
+                                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('address') }}</strong>
+                                    </span>
+                                        @endif
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
                                     <label class="col-md-3 control-label" for="product-name">Facebook</label>
                                     <div class="col-md-9">
                                         <input type="text" id="facebook" name="facebook" class="form-control {{ $errors->has('facebook') ? 'has-error' : '' }}" placeholder="Enter link..">
@@ -36,7 +83,6 @@
 
                                     </div>
                                 </div>
-
 
                                 <div class="form-group">
                                     <label class="col-md-3 control-label" for="product-name">Twitter</label>
@@ -102,6 +148,22 @@
 
                                     </div>
                                 </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="product-name">Gmail</label>
+                                    <div class="col-md-9">
+                                        <input type="text" id="gmail" name="gmail" class="form-control {{ $errors->has('gmail') ? 'has-error' : '' }}" placeholder="Enter link..">
+
+
+                                        @if ($errors->has('gmail'))
+                                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('gmail') }}</strong>
+                                    </span>
+                                        @endif
+
+                                    </div>
+                                </div>
+
 
 
 {{--                                <div class="form-group">--}}

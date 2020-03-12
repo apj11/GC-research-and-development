@@ -1,14 +1,11 @@
 <?php
 
 namespace App\Http\Controllers\Frontend;
-use App\Award;
-use App\About;
-use App\Blog;
 use App\Social;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class AboutController extends Controller
+class SocialController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,15 +15,7 @@ class AboutController extends Controller
     public function index()
     {
         $social=Social::latest()->paginate(1);
-        $award=Award::all();
-        $about=About::all();
-        $blog=Blog::latest()->paginate(2);
-        $menu = 'aboutus_index';
-        return  view('frontend.about')
-            ->with('about',$about)
-            ->with('awards',$award)
-            ->with('menu',$menu)
-            ->with('blog',$blog)
+        return view('frontend.index')
             ->with('social',$social);
     }
 
@@ -59,15 +48,7 @@ class AboutController extends Controller
      */
     public function show($id)
     {
-        $award = Award::findOrFail($id);
-        $about=About::all();
-        $blog=Blog::all();
-        $menu = 'aboutus_show';
-//        dd($award);
-        return view('frontend.about', $award)->with('award',$award)
-            ->with('about',$about)
-            ->with('menu',$menu)
-            ->with('blog',$blog);
+        //
     }
 
     /**

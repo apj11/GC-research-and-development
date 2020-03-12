@@ -24,6 +24,52 @@
                     {{--                                        <input type="text" id="product-id" name="product-id" class="form-control" value="6825">--}}
                     {{--                                    </div>--}}
                     {{--                                </div>--}}
+
+
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="product-name">Company Email</label>
+                        <div class="col-md-9">
+                            <input type="text" id="email" name="email" class="form-control {{ $errors->has('email') ? 'has-error' : '' }}"  value="{{ old('email', isset($social) ? $social->email : '') }}">
+
+
+                            @if ($errors->has('email'))
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                            @endif
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="product-name">Phone Number</label>
+                        <div class="col-md-9">
+                            <input type="text" id="phone" name="phone" class="form-control {{ $errors->has('phone') ? 'has-error' : '' }}"  value="{{ old('facebook', isset($social) ? $social->phone : '') }}">
+
+
+                            @if ($errors->has('phone'))
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('phone') }}</strong>
+                                    </span>
+                            @endif
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="product-name">Address</label>
+                        <div class="col-md-9">
+                            <input type="text" id="address" name="address" class="form-control {{ $errors->has('address') ? 'has-error' : '' }}"  value="{{ old('address', isset($social) ? $social->address : '') }}">
+
+
+                            @if ($errors->has('address'))
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('address') }}</strong>
+                                    </span>
+                            @endif
+
+                        </div>
+                    </div>
                     <div class="form-group">
                         <label class="col-md-3 control-label" for="product-name">Facebook</label>
                         <div class="col-md-9">
@@ -58,12 +104,12 @@
                     <div class="form-group">
                         <label class="col-md-3 control-label" for="product-name">Instagram</label>
                         <div class="col-md-9">
-                            <input type="text" id="instagram" name="instragram" class="form-control {{ $errors->has('instragram') ? 'has-error' : '' }}"  value="{{ old('instragram', isset($social) ? $social->instragram : '') }}">
+                            <input type="text" id="instagram" name="instagram" class="form-control {{ $errors->has('instragram') ? 'has-error' : '' }}"  value="{{ old('instagram', isset($social) ? $social->instagram : '') }}">
 
 
-                            @if ($errors->has('instragram'))
+                            @if ($errors->has('instagram'))
                                 <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('instragram') }}</strong>
+                                        <strong>{{ $errors->first('instagram') }}</strong>
                                     </span>
                             @endif
 
@@ -79,6 +125,21 @@
                             @if ($errors->has('youtube'))
                                 <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('youtube') }}</strong>
+                                    </span>
+                            @endif
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="product-name">Gmail</label>
+                        <div class="col-md-9">
+                            <input type="text" id="gmail" name="gmail" class="form-control {{ $errors->has('gmail') ? 'has-error' : '' }}"  value="{{ old('gmail', isset($social) ? $social->gmail : '') }}">
+
+
+                            @if ($errors->has('gmail'))
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('gmail') }}</strong>
                                     </span>
                             @endif
 

@@ -270,11 +270,14 @@
                 <thead>
                 <tr>
                     <th >ID</th>
+                    <th>Email</th>
+                    <th> Phone Number</th>
+                    <th>Company Address</th>
                     <th>Facebook</th>
                     <th >Twitter</th>
                     <th>Instragram</th>
                     <th >Youtube</th>
-
+                    <th >Gmail</th>
                     {{--                            <th >Service title</th>--}}
                     {{--                            <th >Service image</th>--}}
                     {{--                            <th >Service description</th>--}}
@@ -287,10 +290,14 @@
                 @foreach($social as $key =>$social  )
                     <tr id="social{{$social->id}}">
                         <td class="text-center">{{++$key}}</td>
+                        <td>{{$social->email}}</td>
+                        <td >{{$social->phone}}  </td>
+                        <td>{{$social->address}}</td>
                         <td>{{$social->facebook}}</td>
                         <td >{!! $social->twitter !!}}  </td>
                         <td >{{$social->instagram}}</td>
                         <td >{{$social->youtube}}</td>
+                        <td >{{$social->gmail}}</td>
                         {{--                        --}}{{--                    <td>{{$customer->companyName}}</td>--}}
                         {{--                        <td>{{$customer->address}}</td>--}}
                         {{--                        --}}{{--                    <td>{{$customer->registrationNumber}}</td>--}}

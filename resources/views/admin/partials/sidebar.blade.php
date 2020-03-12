@@ -134,17 +134,26 @@
                     {{--                    <a   href="#" class="nav-sub-link">Account Head</a>--}}
                 </nav>
             </li> -->
-            <!-- <li class="nav-item">
-                <a href="#" class="nav-link with-sub"><i data-feather="book"></i> Slider</a>
-                <nav class="nav nav-sub">
+{{--         <li class="nav-item">--}}
+{{--                <a href="#" class="nav-link with-sub"><i data-feather="book"></i> Slider</a>--}}
+{{--                <nav class="nav nav-sub">--}}
 {{--                    <a href="{{route('slider.create')}}" class="nav-sub-link">Slider</a>--}}
 {{--                    <a href="{{route('slider.index')}}" class="nav-sub-link">All Slider</a>--}}
 {{--                    <a href="#" class="nav-sub-link">Employee Transfer</a>--}}
+{{--                </nav>--}}
+{{--            </li>--}}
+
+            <li class="nav-item">
+                <a href="#" class="nav-link with-sub"><i data-feather="book"></i> Company Social</a>
+                <nav class="nav nav-sub">
+                    <a href="{{route('social.create')}}" class="nav-sub-link">Social</a>
+                    <a href="{{route('social.index')}}" class="nav-sub-link">All Social</a>
+
                 </nav>
-            </li> -->
+            </li>
 
 
-{{--            <li class="nav-item">--}}
+            {{--            <li class="nav-item">--}}
 {{--                <a href="{{route('contact-view')}}" class="nav-link with-sub"><i data-feather="layers"></i>View Contact</a>--}}
 {{--                <nav class="nav nav-sub">--}}
 {{--                    <a href="{{route('contact-view')}}" class="nav-sub-link">View Contact</a>--}}
@@ -157,13 +166,11 @@
                 <nav class="nav nav-sub">
                     <a href="{{route('testimonial.create')}}" class="nav-sub-link">New Testimonial</a>
                     <a href="{{route('testimonial.index')}}" class="nav-sub-link">All Testimonial</a>
-{{--                    <a href="#" class="nav-sub-link">Lead Assignment</a>--}}
-{{--                    <a href="#" class="nav-sub-link">Lead Follow Up</a>--}}
                 </nav>
         <!-- </li>
-            <li class="nav-item">
-                <a href="" class="nav-link with-sub"><i data-feather="monitor"></i> Social link</a>
-                <nav class="nav nav-sub">
+{{--            <li class="nav-item">--}}
+{{--                <a href="" class="nav-link with-sub"><i data-feather="monitor"></i> Social link</a>--}}
+{{--                <nav class="nav nav-sub">--}}
 {{--                    <a href="{{route('social.create')}}" class="nav-sub-link">New Social link</a>--}}
 {{--                    <a href="{{route('social.index')}}" class="nav-sub-link">All social link</a>--}}
 {{--                    <a href="#" class="nav-sub-link">Expense Report</a>--}}

@@ -59,11 +59,13 @@
                             <div class="footer-title">
                                 <h4 class="title">CONTACT INFO</h4>
                             </div>
+                            @foreach($social as $socials)
                             <ul class="link">
-                                <li><i class="fas fa-map-marker-alt"></i><p>Tinkune-32,Kathmandu <span>Nepal</span></p></li>
-                                <li><i class="fas fa-mobile-alt"></i><p>+977 014111992 <span>+977 9841674653</span></p></li>
-                                <li><i class="far fa-envelope"></i><a href="https://softechpark.com/">support@softechpark.com<span>info@softechpark.com</span></a></li>
+                                <li><i class="fas fa-map-marker-alt"></i><p>{{$socials->address}} <span></span></p></li>
+                                <li><i class="fas fa-mobile-alt"></i><p>{{$socials->phone}} <span></span></p></li>
+                                <li><i class="far fa-envelope"></i><a href="{{$socials->email}}"><span>{{$socials->email}}</span></a></li>
                             </ul>
+                                @endforeach
                         </div> <!-- footer wrapper -->
                     </div><!-- footer-link -->
                 </div>

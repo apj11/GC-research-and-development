@@ -2,6 +2,7 @@
 
 <section class="top_head">
     <div class="container">
+        @foreach($social as $socials)
         <div class="row">
             <div class="col-md-3">
                 <div class="top_logo">
@@ -10,22 +11,26 @@
             </div><!-- col -->
             <div class="col-md-3">
                 <div class="head_identity">
-                    <i class="fas fa-map-marker-alt"></i> <span>Tinkune-32, Kathmandu, Nepal</span>
+                    <i class="fas fa-map-marker-alt"></i> <span>{{$socials->address}}</span>
                 </div><!-- head_identity -->
             </div><!-- col -->
             <div class="col-md-3">
                 <div class="head_identity">
-                    <a href="https://softechpark.com/">     <i class="fas fa-globe"></i> <span>softechpark.com</span></a>
+                    <a href="{{$socials->facebook}}">     <i class="fas fa-globe"></i> <span>{{$socials->facebook}}</span></a>
                 </div><!-- head_identity -->
             </div><!-- col -->
             <div class="col-md-3">
                 <div class="head_identity">
-                    <i class="fas fa-mobile-alt"></i> <span>+977 014234232</span>
+                    <i class="fas fa-mobile-alt"></i> <span>{{$socials->phone}}</span>
                 </div><!-- head_identity -->
             </div><!-- col -->
+
         </div><!-- row -->
+        @endforeach
     </div><!-- container -->
-</section><!-- top_head -->
+</section>
+
+<!-- top_head -->
 <div id="navbar" class="top_navigation top_navigation2 nav_no_pos">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -56,8 +61,8 @@
                 </ul>
             </div>
 
-           
-           
+
+
 
            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered top_login" role="document">
